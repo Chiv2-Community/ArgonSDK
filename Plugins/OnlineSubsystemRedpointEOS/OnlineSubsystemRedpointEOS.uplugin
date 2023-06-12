@@ -1,0 +1,82 @@
+{
+	"FileVersion": 3,
+	"Version": 10000,
+	"VersionName": "Unversioned",
+	"FriendlyName": "EOS Online Subsystem",
+	"Description": "Provides an online subsystem for Epic Online Services.",
+	"Category": "Networking",
+	"CreatedBy": "Redpoint Games",
+	"CreatedByURL": "https://redpoint.games/",
+	"DocsURL": "https://docs.redpoint.games/eos-online-subsystem/",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/2c92594ce5aa416c8bfbd79275389e3b",
+	"SupportURL": "https://redpoint.games/support/",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "OnlineSubsystemRedpointEOS",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Mac",
+				"IOS",
+				"Android",
+				"Linux"
+			]
+		}
+	],
+	"PreBuildSteps":
+	{
+		"Win64": [
+			"\"$(PluginDir)\\Resources\\InstallStagingHooksInEngine.bat\" \"$(ProjectDir)\""
+		]
+	},
+	"Plugins": [
+		{
+			"Name": "OnlineSubsystem",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemUtils",
+			"Enabled": true
+		},
+		{
+			"Name": "AESGCMHandlerComponent",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemSteam",
+			"Enabled": true,
+			"Optional": true,
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Mac",
+				"Linux"
+			]
+		},
+		{
+			"Name": "OnlineSubsystemOculus",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Android"
+			]
+		},
+		{
+			"Name": "OnlineSubsystemGoogle",
+			"Enabled": false
+		},
+		{
+			"Name": "WebBrowserWidget",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Win64",
+				"Mac",
+				"Linux"
+			]
+		}
+	]
+}

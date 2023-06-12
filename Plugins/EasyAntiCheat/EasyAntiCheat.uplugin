@@ -1,0 +1,27 @@
+{
+	"FileVersion": 3,
+	"Version": 0,
+	"VersionName": "1.2",
+	"FriendlyName": "EasyAntiCheat",
+	"Description": "EasyAntiCheat plugin",
+	"Category": "EasyAntiCheat",
+	"CreatedBy": "Epic Games, Inc",
+	"CreatedByURL": "https://easyanticheat.net",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "EasyAntiCheatCommon",
+			"Type": "RuntimeNoCommandlet",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win64"
+			]
+		}
+	]
+}

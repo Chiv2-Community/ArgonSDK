@@ -1,0 +1,25 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Staggered Updater",
+	"Description": "Plugin to limit the number of objects that can tick per frame. Use for things whose \"tick\" functions _can_ be delayed. It can be nicer to use this than a 'delay' number in a lot of cases as delays eventually end up overlapping and causing a hitch. We use this, e.g., for HUD widgets so that only a limited number of them update per frame.",
+	"Category": "Programming",
+	"CreatedBy": "Torn Banner Studios",
+	"CreatedByURL": "http://tornbanner.com",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": false,
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "StaggeredUpdater",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
+		}
+	]
+}

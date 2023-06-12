@@ -1,0 +1,24 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Sparse Grid",
+	"Description": "A high-performance spatial sorting system, allowing for extremely fast world-space queries for objects.",
+	"Category": "Stormtide",
+	"CreatedBy": "Stormtide Ltd.",
+	"CreatedByURL": "https://www.stormtide.co.uk",
+	"DocsURL": "https://drive.google.com/open?id=1RcE0R2iyXhSY2f4-Z_Idok3JhGyOf8pm",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/13b592ea80814f2e841cb4efb9861434",
+	"SupportURL": "support@stormtide.co.uk",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "ST_SparseGrid",
+			"Type": "Runtime",
+			"LoadingPhase": "PreDefault"
+		}
+	]
+}
