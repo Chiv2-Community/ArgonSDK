@@ -64,7 +64,7 @@ TSet<ATBLAIController*> UTBLAISystem::GetControllersTargetting(AActor* Target) c
 void UTBLAISystem::CreateAvoidanceArea(UObject* Instigator, const FVector& Location, float Radius) {
 }
 
-UTBLAISystem::UTBLAISystem() {
+UTBLAISystem::UTBLAISystem() : UAISystem(FObjectInitializer()) {
     this->TagSystem = NULL;
     this->LastKnownObjectiveTimeRemaining = -1.00f;
     this->LastKnownObjectiveTimePercentRemaining = -1.00f;

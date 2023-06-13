@@ -81,9 +81,9 @@ UClass* UCustomizationLibrary::GetPrimaryAssetClass(FPrimaryAssetId PrimaryAsset
     return NULL;
 }
 
-FText UCustomizationLibrary::GetOnlineStoreOfferTitle(const FOnlineStoreOffer& OnlineStoreOffer) {
-    return FText::GetEmpty();
-}
+//FText UCustomizationLibrary::GetOnlineStoreOfferTitle(const FOnlineStoreOffer& OnlineStoreOffer) {
+//    return FText::GetEmpty();
+//}
 
 USkeletalMeshComponent* UCustomizationLibrary::GetLegsMesh(ATBLCharacter* Char, bool WantFirstPerson) {
     return NULL;

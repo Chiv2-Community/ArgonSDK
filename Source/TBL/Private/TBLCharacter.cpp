@@ -156,9 +156,9 @@ bool ATBLCharacter::ServerSetFireSource_Validate(UFireSourceComponent* NewFireSo
     return true;
 }
 
-void ATBLCharacter::ServerPlayEmote_Implementation(uint8 EmoteRowNum, TEnumAsByte<EAudioPersonalityType::Type> PersonalityType, uint8 EmotePlayingSeqNum, uint8 bIsOverrideEmote, uint8 EmoteType) {
+void ATBLCharacter::ServerPlayEmote_Implementation(uint8 EmoteRowNum, EAudioPersonalityType::Type PersonalityType, uint8 EmotePlayingSeqNum, uint8 bIsOverrideEmote, uint8 EmoteType) {
 }
-bool ATBLCharacter::ServerPlayEmote_Validate(uint8 EmoteRowNum, TEnumAsByte<EAudioPersonalityType::Type> PersonalityType, uint8 EmotePlayingSeqNum, uint8 bIsOverrideEmote, uint8 EmoteType) {
+bool ATBLCharacter::ServerPlayEmote_Validate(uint8 EmoteRowNum, EAudioPersonalityType::Type PersonalityType, uint8 EmotePlayingSeqNum, uint8 bIsOverrideEmote, uint8 EmoteType) {
     return true;
 }
 
@@ -695,11 +695,11 @@ void ATBLCharacter::BroadcastCinematicAllowControl() {
 void ATBLCharacter::BroadcastChickenEmote_Implementation() {
 }
 
-void ATBLCharacter::BroadcastCharacterEmote_Implementation(uint8 EmoteRowNum, TEnumAsByte<EAudioPersonalityType::Type> PersonalityType, uint8 EmotePlayingSeqNum, uint8 EmoteRandomSeed, uint8 bIsOverrideEmote, uint8 EmoteType) {
+void ATBLCharacter::BroadcastCharacterEmote_Implementation(uint8 EmoteRowNum, EAudioPersonalityType::Type PersonalityType, uint8 EmotePlayingSeqNum, uint8 EmoteRandomSeed, uint8 bIsOverrideEmote, uint8 EmoteType) {
 }
 
-void ATBLCharacter::BroadcastAutoVO_Implementation(TEnumAsByte<EAudioAutoVOType::Type> AutoVoType, bool SkipLocalPlayer) {
-}
+//void ATBLCharacter::BroadcastAutoVO(EAudioAutoVOType::Type AutoVoType, bool SkipLocalPlayer) {
+//}
 
 void ATBLCharacter::BroadcastAbleToHealIfChanged() {
 }

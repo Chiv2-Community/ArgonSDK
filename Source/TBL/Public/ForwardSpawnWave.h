@@ -21,7 +21,8 @@ protected:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<TWeakObjectPtr<AController>, FTimerHandle> ControllerCombatTimerMap;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    //UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     TSet<TWeakObjectPtr<AController>> ControllerAwaitingCombatTimer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_PawnsAllowedToForwardSpawn, meta=(AllowPrivateAccess=true))

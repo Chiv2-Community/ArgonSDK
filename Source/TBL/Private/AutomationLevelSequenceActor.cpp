@@ -6,6 +6,6 @@ void AAutomationLevelSequenceActor::OnStop() {
 void AAutomationLevelSequenceActor::OnSequenceEvent(FAutomationSequenceEvent SequenceEvent) {
 }
 
-AAutomationLevelSequenceActor::AAutomationLevelSequenceActor() {
+AAutomationLevelSequenceActor::AAutomationLevelSequenceActor() : ALevelSequenceActor(FObjectInitializer()){
 }
 

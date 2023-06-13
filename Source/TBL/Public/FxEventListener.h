@@ -61,7 +61,7 @@ public:
     void OnWasParried(ATBLCharacter* ThisCharacter, ATBLCharacter* OtherCharacter, FParryEventState ParryEventState);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnTargetMethodEvent(AActor* Initiator, FName TargetMethodName, TEnumAsByte<ETargetMethodEvent::Type> Event, const AAbilityInvocation* Invocation, FVector Location, const TArray<AActor*>& HitTargets);
+    void OnTargetMethodEvent(AActor* Initiator, FName TargetMethodName, ETargetMethodEvent::Type Event, const AAbilityInvocation* Invocation, FVector Location, const TArray<AActor*>& HitTargets);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnSuicide(AActor* Suicider, const FDamageTakenEvent& DamageTakenEvent);
@@ -190,7 +190,7 @@ public:
     void OnCombatStateBegin(AActor* Actor, FName State, const FAttackInfo& EventAttackInfo, UCombatState* InCombatState);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnClientPreTravel(const FString& PendingURL, TEnumAsByte<ETravelType> TravelType, bool bIsSeamlessTravel);
+    void OnClientPreTravel(const FString& PendingURL, ETravelType TravelType, bool bIsSeamlessTravel);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
     void OnClash(ATBLCharacter* InitiatorCharacter, ATBLCharacter* TargetCharacter, FClashEventState ClashEventState);
@@ -211,7 +211,7 @@ public:
     void OnAbilityOnCooldown(const FAbility& Ability, float RemainingTime, AInventoryItem* InventoryItem);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void OnAbilityError(AActor* Initiator, TEnumAsByte<EResultCode::Type> Code, AAbilityInvocation* Invocation, FName AttackName, TSubclassOf<AInventoryItem> ItemClass);
+    void OnAbilityError(AActor* Initiator, EResultCode::Type Code, AAbilityInvocation* Invocation, FName AttackName, TSubclassOf<AInventoryItem> ItemClass);
     
 };
 

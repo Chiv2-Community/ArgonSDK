@@ -187,7 +187,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     uint8 ReplicatedServerFrame;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    //UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPROPERTY()
     FBasedMovementInfo LastReplicatedBasedMovement;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_RandomSeed, meta=(AllowPrivateAccess=true))
@@ -979,7 +980,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
-    void ServerPlayEmote(uint8 EmoteRowNum, TEnumAsByte<EAudioPersonalityType::Type> PersonalityType, uint8 EmotePlayingSeqNum, uint8 bIsOverrideEmote, uint8 EmoteType);
+    void ServerPlayEmote(uint8 EmoteRowNum, EAudioPersonalityType::Type PersonalityType, uint8 EmotePlayingSeqNum, uint8 bIsOverrideEmote, uint8 EmoteType);
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerPlayChickenEmote();
@@ -1483,10 +1484,11 @@ public:
     void BroadcastChickenEmote();
     
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
-    void BroadcastCharacterEmote(uint8 EmoteRowNum, TEnumAsByte<EAudioPersonalityType::Type> PersonalityType, uint8 EmotePlayingSeqNum, uint8 EmoteRandomSeed, uint8 bIsOverrideEmote, uint8 EmoteType);
-    
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
-    void BroadcastAutoVO(TEnumAsByte<EAudioAutoVOType::Type> AutoVoType, bool SkipLocalPlayer);
+    void BroadcastCharacterEmote(uint8 EmoteRowNum, EAudioPersonalityType::Type PersonalityType, uint8 EmotePlayingSeqNum, uint8 EmoteRandomSeed, uint8 bIsOverrideEmote, uint8 EmoteType);
+
+    //FIXME - prolly ez
+    /*UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
+    void BroadcastAutoVO(EAudioAutoVOType::Type AutoVoType, bool SkipLocalPlayer);*/
     
 protected:
     UFUNCTION(BlueprintCallable)

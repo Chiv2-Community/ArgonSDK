@@ -4,7 +4,8 @@
 
 UENUM(BlueprintType)
 enum class EHoudiniCurveType : uint8 {
-    Invalid = -0x1,
+    //EHoudiniCurveTypeNone,
+    Invalid = 0x0, // -0x1
     Polygon,
     Nurbs,
     Bezier,

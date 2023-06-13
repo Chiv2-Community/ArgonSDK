@@ -362,8 +362,9 @@ public:
     UFUNCTION(BlueprintCallable)
     void KnockRiderOffHorse();
     
-    UFUNCTION(BlueprintCallable)
-    void Kill();
+    // FIXME
+    /*UFUNCTION(BlueprintCallable)
+    void Kill();*/
     
     UFUNCTION(BlueprintCallable)
     void KickNoDriver();
@@ -408,7 +409,7 @@ public:
     FVector GetThirdPersonCameraAttachPoint();
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    TEnumAsByte<ECollisionResponse> GetRiderToWorldCollision();
+    ECollisionResponse GetRiderToWorldCollision();
     
     UFUNCTION(BlueprintCallable)
     float GetRelativeSpeed(AActor* OtherActor);

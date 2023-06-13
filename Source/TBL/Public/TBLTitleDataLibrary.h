@@ -3,6 +3,7 @@
 #include "Kismet/BlueprintFunctionLibrary.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=OnlineSubsystem -ObjectName=Motd -FallbackName=Motd
 //CROSS-MODULE INCLUDE V2: -ModuleName=OnlineSubsystem -ObjectName=TitleNews -FallbackName=TitleNews
+#include "Engine_misc.h"
 #include "MatchmakingQueue.h"
 #include "TBLTitleDataLibrary.generated.h"
 
@@ -47,8 +48,8 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool HasMotd();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    static TArray<FTitleNews> GetTitleNews();
+    /*UFUNCTION(BlueprintCallable, BlueprintPure)
+    static TArray<FTitleNews> GetTitleNews();*/
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static TMap<FString, FString> GetTitleData();
@@ -59,8 +60,8 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static FString GetQuickplayQueueName();
     
-    UFUNCTION(BlueprintCallable, BlueprintPure)
-    static FMotd GetMotd();
+    /*UFUNCTION(BlueprintCallable, BlueprintPure)
+    static FMotd GetMotd();*/
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static bool GetMatchmakingQueue(FName ID, FMatchmakingQueue& Queue);

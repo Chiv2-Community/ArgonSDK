@@ -48,9 +48,9 @@ bool UTBLTitleDataLibrary::HasMotd() {
     return false;
 }
 
-TArray<FTitleNews> UTBLTitleDataLibrary::GetTitleNews() {
-    return TArray<FTitleNews>();
-}
+//TArray<FTitleNews> UTBLTitleDataLibrary::GetTitleNews() {
+//    return TArray<FTitleNews>();
+//}
 
 TMap<FString, FString> UTBLTitleDataLibrary::GetTitleData() {
     return TMap<FString, FString>();
@@ -64,9 +64,9 @@ FString UTBLTitleDataLibrary::GetQuickplayQueueName() {
     return TEXT("");
 }
 
-FMotd UTBLTitleDataLibrary::GetMotd() {
-    return FMotd{};
-}
+//FMotd UTBLTitleDataLibrary::GetMotd() {
+//    return FMotd{};
+//}
 
 bool UTBLTitleDataLibrary::GetMatchmakingQueue(FName ID, FMatchmakingQueue& Queue) {
     return false;

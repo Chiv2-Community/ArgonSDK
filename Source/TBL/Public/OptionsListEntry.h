@@ -11,7 +11,7 @@ public:
     UOptionsListEntry();
 protected:
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void BP_OnSelected(const TEnumAsByte<ESelectInfo::Type> SelectInfo);
+    void BP_OnSelected(const ESelectInfo::Type SelectInfo);
     
 };
 

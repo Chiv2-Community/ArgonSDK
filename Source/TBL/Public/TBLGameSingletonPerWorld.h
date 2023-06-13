@@ -32,11 +32,11 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<FName> LoadedCinematicSublevels;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FRagdollTickFunction RagdollTickFunction;
+    /*UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FRagdollTickFunction RagdollTickFunction;*/
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FOutOfCombatZoneVolumeTickFunction OutOfCombatZoneTickFunction;
+    /*UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FOutOfCombatZoneVolumeTickFunction OutOfCombatZoneTickFunction;*/
     
     TBL_API FTBLGameSingletonPerWorld();
 };

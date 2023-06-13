@@ -9,7 +9,9 @@
 			"Type": "Runtime",
 			"LoadingPhase": "Default",
 			"AdditionalDependencies": [
-				"Engine"
+				"Engine",
+				"UMG",
+				"CoreUObject"
 			]
 		},
 		{
@@ -26,7 +28,7 @@
 	"Plugins": [
 		{
 			"Name": "SignificanceManager",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "FileLogging",
@@ -34,15 +36,15 @@
 		},
 		{
 			"Name": "Gauntlet",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "MfMedia",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "OnlineSubsystemSteam",
-			"Enabled": true,
+			"Enabled": false,
 			"WhitelistPlatforms": [
 				"Win64"
 			],
@@ -50,7 +52,11 @@
 		},
 		{
 			"Name": "OnlineSubsystemUtils",
-			"Enabled": true
+			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemPlayFab",
+			"Enabled": false
 		},
 		{
 			"Name": "OculusVR",
@@ -118,7 +124,7 @@
 		},
 		{
 			"Name": "SpeedTreeImporter",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "AndroidDeviceProfileSelector",
@@ -150,7 +156,7 @@
 		},
 		{
 			"Name": "AndroidPermission",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "FacialAnimation",
@@ -174,7 +180,7 @@
 		},
 		{
 			"Name": "Wwise",
-			"Enabled": true,
+			"Enabled": false,
 			"WhitelistPlatforms": [
 				"Win64"
 			],
@@ -191,16 +197,16 @@
 		},
 		{
 			"Name": "MORT",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/f6a838d3c72b4d28b5635da50d3335e5"
 		},
 		{
 			"Name": "RenderDocPlugin",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "StaggeredUpdater",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "ST_SparseGrid",
@@ -209,31 +215,31 @@
 		},
 		{
 			"Name": "ProxyLODPlugin",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "Ansel",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "ApexDestruction",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "EditorScriptingUtilities",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "PythonScriptPlugin",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "ControlRig",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "HoudiniEngine",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "ReplicationGraph",
@@ -241,14 +247,14 @@
 		},
 		{
 			"Name": "EasyAntiCheat",
-			"Enabled": true,
+			"Enabled": false,
 			"WhitelistPlatforms": [
 				"Win64"
 			]
 		},
 		{
 			"Name": "AnimationBudgetAllocator",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "EditableMesh",
@@ -280,11 +286,11 @@
 		},
 		{
 			"Name": "GameplayInsights",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "TraceDataFilters",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "MagicLeap",
@@ -368,7 +374,7 @@
 		},
 		{
 			"Name": "MultiplayApi",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "PlatformCrypto",
@@ -376,7 +382,7 @@
 		},
 		{
 			"Name": "OptickPlugin",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/95c078f6fa924b2b82fd8f281e04850f",
 			"WhitelistPlatforms": [
 				"Win64"
@@ -388,27 +394,27 @@
 		},
 		{
 			"Name": "Landmass",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "AnalyticsBlueprintLibrary",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "RuntimeTests",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "FunctionalTestingEditor",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "EditorTests",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "FbxAutomationTestBuilder",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "AppleProResMedia",
@@ -419,11 +425,11 @@
 		},
 		{
 			"Name": "Niagara",
-			"Enabled": true
+			"Enabled": false
 		},
 		{
 			"Name": "OnlineSubsystemRedpointEOS",
-			"Enabled": true,
+			"Enabled": false,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/2c92594ce5aa416c8bfbd79275389e3b"
 		}
 	]

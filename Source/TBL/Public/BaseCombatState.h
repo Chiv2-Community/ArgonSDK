@@ -30,8 +30,8 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool NeedToReload() const;
     
-    UFUNCTION(BlueprintCallable)
-    void ManualReload();
+    /*UFUNCTION(BlueprintCallable)
+    void ManualReload();*/
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetStaminaPercent() const;

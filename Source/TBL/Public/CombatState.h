@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AssemblyInstance -FallbackName=AssemblyInstance
+#include "Engine_misc.h"
 #include "Engine/EngineTypes.h"
 #include "CombatStateModifiers.h"
 #include "CombatStateSlowdown.h"

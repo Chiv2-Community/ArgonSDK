@@ -141,7 +141,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SaveCloudUserSettingsIfDirty();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnReadUserFileComplete(const FPlatformInterfaceDelegateResult& Result);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)

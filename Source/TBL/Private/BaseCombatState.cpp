@@ -13,8 +13,8 @@ bool UBaseCombatState::NeedToReload() const {
     return false;
 }
 
-void UBaseCombatState::ManualReload() {
-}
+//void UBaseCombatState::ManualReload() {
+//}
 
 float UBaseCombatState::GetStaminaPercent() const {
     return 0.0f;

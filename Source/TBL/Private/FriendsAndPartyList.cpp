@@ -15,7 +15,7 @@ void UFriendsAndPartyList::OnUsersChanged(const TSet<FString>& ChangedUsers) {
 void UFriendsAndPartyList::BP_NavigateToItem(const FBlueprintOnlineUser& Item) {
 }
 
-UFriendsAndPartyList::UFriendsAndPartyList() {
+UFriendsAndPartyList::UFriendsAndPartyList() : UListViewBase(FObjectInitializer()) {
     this->ListType = EFriendsListType::Friends_All;
     this->ScrollBarStyle = NULL;
     this->Orientation = Orient_Vertical;

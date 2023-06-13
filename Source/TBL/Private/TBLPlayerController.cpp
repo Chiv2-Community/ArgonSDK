@@ -477,9 +477,9 @@ bool ATBLPlayerController::ServerSendMatchProfile_Validate(const FString& Nickna
     return true;
 }
 
-void ATBLPlayerController::ServerSendEquippedPersonality_Implementation(TEnumAsByte<EAudioPersonalityType::Type> PersonalityType) {
+void ATBLPlayerController::ServerSendEquippedPersonality_Implementation(EAudioPersonalityType::Type PersonalityType) {
 }
-bool ATBLPlayerController::ServerSendEquippedPersonality_Validate(TEnumAsByte<EAudioPersonalityType::Type> PersonalityType) {
+bool ATBLPlayerController::ServerSendEquippedPersonality_Validate(EAudioPersonalityType::Type PersonalityType) {
     return true;
 }
 
@@ -738,9 +738,9 @@ bool ATBLPlayerController::ServerBroadcastDebugMessage_Validate(const FString& M
     return true;
 }
 
-void ATBLPlayerController::ServerBroadcast_Implementation(const FString& Msg, TEnumAsByte<EChatType::Type> ChatType, FColor OverrideColor) {
+void ATBLPlayerController::ServerBroadcast_Implementation(const FString& Msg, EChatType::Type ChatType, FColor OverrideColor) {
 }
-bool ATBLPlayerController::ServerBroadcast_Validate(const FString& Msg, TEnumAsByte<EChatType::Type> ChatType, FColor OverrideColor) {
+bool ATBLPlayerController::ServerBroadcast_Validate(const FString& Msg, EChatType::Type ChatType, FColor OverrideColor) {
     return true;
 }
 
@@ -1192,16 +1192,16 @@ FPrimaryAssetId ATBLPlayerController::GetEquippedCustomizationWeaponAsset(EWeapo
     return FPrimaryAssetId{};
 }
 
-TArray<FOnlineStoreOffer> ATBLPlayerController::GetCatalogInLevelRange(bool LevelAccessible, int32 MinLevel, int32 MaxLevel, EOnlineStat Stat) {
-    return TArray<FOnlineStoreOffer>();
-}
+//TArray<FOnlineStoreOffer> ATBLPlayerController::GetCatalogInLevelRange(bool LevelAccessible, int32 MinLevel, int32 MaxLevel, EOnlineStat Stat) {
+//    return TArray<FOnlineStoreOffer>();
+//}
 
 void ATBLPlayerController::GetCatalogExec(bool LevelAccessible, int32 LevelsAbove) {
 }
 
-TArray<FOnlineStoreOffer> ATBLPlayerController::GetCatalog(bool LevelAccessible, int32 LevelsAbove, EOnlineStat Stat) {
-    return TArray<FOnlineStoreOffer>();
-}
+//TArray<FOnlineStoreOffer> ATBLPlayerController::GetCatalog(bool LevelAccessible, int32 LevelsAbove, EOnlineStat Stat) {
+//    return TArray<FOnlineStoreOffer>();
+//}
 
 UTBLCampaignsCachedData* ATBLPlayerController::GetCampaignsCachedData() {
     return NULL;
@@ -1389,7 +1389,7 @@ void ATBLPlayerController::ClientReceiveObjectiveContextMessage_Implementation(c
 void ATBLPlayerController::ClientReceiveLocalizedObjectiveMessage_Implementation(const FObjectiveMessage& ObjectiveMessage) {
 }
 
-void ATBLPlayerController::ClientReceiveLocalizedChat_Implementation(const FText& FormatText, TEnumAsByte<EChatType::Type> Type) {
+void ATBLPlayerController::ClientReceiveLocalizedChat_Implementation(const FText& FormatText, EChatType::Type Type) {
 }
 
 void ATBLPlayerController::ClientReceiveGameModeMessages_Implementation(const TArray<FGameModeMessage>& GameModeMessages) {
@@ -1407,7 +1407,7 @@ void ATBLPlayerController::ClientReceiveDeathRecap_Implementation(FDeathRecap De
 void ATBLPlayerController::ClientReceivedAutoBalanceNotification_Implementation(EFaction NewFaction) {
 }
 
-void ATBLPlayerController::ClientReceiveChat_Implementation(ATBLPlayerState* SenderPlayerState, const FString& S, TEnumAsByte<EChatType::Type> Type, bool IsSenderDev, FColor OverrideColor) {
+void ATBLPlayerController::ClientReceiveChat_Implementation(ATBLPlayerState* SenderPlayerState, const FString& S, EChatType::Type Type, bool IsSenderDev, FColor OverrideColor) {
 }
 
 void ATBLPlayerController::ClientPushCmd_Implementation(const FString& Cmd) {

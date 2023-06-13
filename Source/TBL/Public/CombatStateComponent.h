@@ -531,8 +531,8 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnAbilityInitiated(AAbilityInvocation* Invocation);
     
-    UFUNCTION(BlueprintCallable)
-    void ManualReload();
+    /*UFUNCTION(BlueprintCallable)
+    void ManualReload();*/
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     bool IsUsingAttackTracers() const;

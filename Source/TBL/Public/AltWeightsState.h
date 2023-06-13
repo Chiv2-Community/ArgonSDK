@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BlendedLODSkelMeshSkinWeights -FallbackName=BlendedLODSkelMeshSkinWeights
+#include "Engine_misc.h"
 #include "AltWeightsState.generated.h"
 
 USTRUCT(BlueprintType)

@@ -6,6 +6,7 @@ public class TBLEditorTarget : TargetRules {
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.AddRange(new string[] {
 			"AnalyticsCore",
+			//"OnlineSubsystem",
 			"TBL",
 			"TBLLoadingScreen",
 		});

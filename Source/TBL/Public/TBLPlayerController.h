@@ -16,6 +16,7 @@
 #include "GameplayTagContainer.h"
 #include "GameplayTaskOwnerInterface.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=OnlineSubsystem -ObjectName=OnlineStoreOffer -FallbackName=OnlineStoreOffer
+#include "Engine_misc.h"
 #include "AcknowledgeTeamRequestSignatureDelegate.h"
 #include "AllowedCharactersChangedDelegate.h"
 #include "AutoBalanceNotificationReceivedDelegate.h"
@@ -1204,7 +1205,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
-    void ServerSendEquippedPersonality(TEnumAsByte<EAudioPersonalityType::Type> PersonalityType);
+    void ServerSendEquippedPersonality(EAudioPersonalityType::Type PersonalityType);
     
     UFUNCTION(BlueprintCallable, Exec)
     void ServerSay(FString& Msg);
@@ -1349,7 +1350,7 @@ protected:
     
 public:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
-    void ServerBroadcast(const FString& Msg, TEnumAsByte<EChatType::Type> ChatType, FColor OverrideColor);
+    void ServerBroadcast(const FString& Msg, EChatType::Type ChatType, FColor OverrideColor);
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerBPCheat(const FString& CheatAndParams);
@@ -1554,7 +1555,8 @@ private:
     void OnReceivedFocus();
     
 public:
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
+    //UFUNCTION(BlueprintCallable)
     void OnReadUserFileComplete(const FPlatformInterfaceDelegateResult& Result);
     
 private:
@@ -1584,7 +1586,8 @@ public:
     UFUNCTION(BlueprintCallable)
     void OnInputExitDeathCam();
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
+    //UFUNCTION(BlueprintCallable)
     void OnEnumerateCloudFilesComplete(const FPlatformInterfaceDelegateResult& Result);
     
     UFUNCTION(BlueprintCallable)
@@ -1780,14 +1783,14 @@ public:
     UFUNCTION(BlueprintCallable)
     FPrimaryAssetId GetEquippedCustomizationWeaponAsset(EWeaponTag WeaponTag, EFaction Faction, TEnumAsByte<EAudioClassType::Type> CharacterType);
     
-    UFUNCTION(BlueprintCallable)
-    TArray<FOnlineStoreOffer> GetCatalogInLevelRange(bool LevelAccessible, int32 MinLevel, int32 MaxLevel, EOnlineStat Stat);
+    /*UFUNCTION(BlueprintCallable)
+    TArray<FOnlineStoreOffer> GetCatalogInLevelRange(bool LevelAccessible, int32 MinLevel, int32 MaxLevel, EOnlineStat Stat);*/
     
     UFUNCTION(BlueprintCallable, Exec)
     void GetCatalogExec(bool LevelAccessible, int32 LevelsAbove);
     
-    UFUNCTION(BlueprintCallable)
-    TArray<FOnlineStoreOffer> GetCatalog(bool LevelAccessible, int32 LevelsAbove, EOnlineStat Stat);
+    /*UFUNCTION(BlueprintCallable)
+    TArray<FOnlineStoreOffer> GetCatalog(bool LevelAccessible, int32 LevelsAbove, EOnlineStat Stat);*/
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     UTBLCampaignsCachedData* GetCampaignsCachedData();
@@ -1976,7 +1979,7 @@ public:
     void ClientReceiveLocalizedObjectiveMessage(const FObjectiveMessage& ObjectiveMessage);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
-    void ClientReceiveLocalizedChat(const FText& FormatText, TEnumAsByte<EChatType::Type> Type);
+    void ClientReceiveLocalizedChat(const FText& FormatText, EChatType::Type Type);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientReceiveGameModeMessages(const TArray<FGameModeMessage>& GameModeMessages);
@@ -1994,7 +1997,7 @@ public:
     void ClientReceivedAutoBalanceNotification(EFaction NewFaction);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
-    void ClientReceiveChat(ATBLPlayerState* SenderPlayerState, const FString& S, TEnumAsByte<EChatType::Type> Type, bool IsSenderDev, FColor OverrideColor);
+    void ClientReceiveChat(ATBLPlayerState* SenderPlayerState, const FString& S, EChatType::Type Type, bool IsSenderDev, FColor OverrideColor);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientPushCmd(const FString& Cmd);

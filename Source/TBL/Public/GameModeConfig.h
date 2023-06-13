@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AssemblyBlueprint -FallbackName=AssemblyBlueprint
+#include "Engine_misc.h"
 #include "GameModeConfig.generated.h"
 
 class UCurveFloat;

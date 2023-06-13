@@ -1,6 +1,6 @@
 #include "PlayerTask.h"
 
-UPlayerTask::UPlayerTask() {
+UPlayerTask::UPlayerTask() : UGameplayTask(FObjectInitializer()){
     this->PlayerController = NULL;
 }
 

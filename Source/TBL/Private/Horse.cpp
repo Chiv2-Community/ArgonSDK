@@ -79,8 +79,8 @@ void AHorse::MaintainSpeedOnImpact() {
 void AHorse::KnockRiderOffHorse() {
 }
 
-void AHorse::Kill() {
-}
+//void AHorse::Kill() {
+//}
 
 void AHorse::KickNoDriver() {
 }

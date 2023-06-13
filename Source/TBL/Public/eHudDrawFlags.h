@@ -4,6 +4,7 @@
 
 UENUM(BlueprintType)
 enum eHudDrawFlags {
+    eHudDrawFlagsNone,
     RadialEmote = 0x1,
 };
 

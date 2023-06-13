@@ -171,10 +171,10 @@ public:
     UFUNCTION(BlueprintCallable, Exec)
     void PartyKickExec(const FString& PlayerId);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnReadUserFileComplete(const FPlatformInterfaceDelegateResult& Result);
     
-    UFUNCTION(BlueprintCallable)
+    UFUNCTION()
     void OnEnumerateCloudFilesComplete(const FPlatformInterfaceDelegateResult& Result);
     
 private:

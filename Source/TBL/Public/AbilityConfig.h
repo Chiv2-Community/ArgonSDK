@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AssemblyBlueprint -FallbackName=AssemblyBlueprint
+#include "Engine_misc.h"
 #include "AimPenaltySettings.h"
 #include "BlockingCategoryModifier.h"
 #include "DeathRecapLimits.h"

@@ -41,7 +41,7 @@ public:
     float GetTurnInputScale(EHorseTurnInput TurnInput, float OrientationOffset);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)
-    void GetTargetOrientationOffset(float& Min, float& Max, TEnumAsByte<EMovementDirection> Direction);
+    void GetTargetOrientationOffset(float& Min, float& Max, EMovementDirection Direction);
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     float GetSpeed(FName State, float Percent);

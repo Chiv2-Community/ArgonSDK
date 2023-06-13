@@ -1,5 +1,5 @@
 #include "FirstPersonCineCameraActor.h"
 
-AFirstPersonCineCameraActor::AFirstPersonCineCameraActor() {
+AFirstPersonCineCameraActor::AFirstPersonCineCameraActor() :ACineCameraActor(FObjectInitializer()) {
 }
 

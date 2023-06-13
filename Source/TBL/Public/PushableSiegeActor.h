@@ -24,7 +24,7 @@ class UTBLNavModifierComponent;
 class UTeamCapturePointComponent;
 
 UCLASS(Blueprintable, Config=Game)
-class APushableSiegeActor : public ATBLActor, public IHUDMarkerInterface, public IRVOAvoidanceInterface {
+class APushableSiegeActor : public ATBLActor, public IHUDMarkerInterface/*, public IRVOAvoidanceInterface*/ { // FIXME
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))

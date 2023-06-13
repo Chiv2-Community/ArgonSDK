@@ -1,6 +1,6 @@
 #include "StoreOffersList.h"
 
-UStoreOffersList::UStoreOffersList() {
+UStoreOffersList::UStoreOffersList() : UListView(FObjectInitializer()) {
     this->ScrollBarStyle = NULL;
 }
 

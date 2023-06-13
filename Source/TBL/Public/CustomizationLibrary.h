@@ -7,6 +7,7 @@
 #include "UObject/NoExportTypes.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=OnlineSubsystem -ObjectName=OnlineStoreOffer -FallbackName=OnlineStoreOffer
+#include "Engine_misc.h"
 #include "Styling/SlateBrush.h"
 #include "CustomizationContext.h"
 #include "CustomizationPreset.h"
@@ -105,8 +106,8 @@ public:
     UFUNCTION(BlueprintCallable)
     static UClass* GetPrimaryAssetClass(FPrimaryAssetId PrimaryAsset);
     
-    UFUNCTION(BlueprintCallable)
-    static FText GetOnlineStoreOfferTitle(const FOnlineStoreOffer& OnlineStoreOffer);
+    /*UFUNCTION(BlueprintCallable)
+    static FText GetOnlineStoreOfferTitle(const FOnlineStoreOffer& OnlineStoreOffer);*/
     
     UFUNCTION(BlueprintCallable, BlueprintPure)
     static USkeletalMeshComponent* GetLegsMesh(ATBLCharacter* Char, bool WantFirstPerson);

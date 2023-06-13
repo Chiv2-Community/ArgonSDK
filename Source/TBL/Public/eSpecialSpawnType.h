@@ -4,6 +4,7 @@
 
 UENUM(BlueprintType)
 enum eSpecialSpawnType {
+    eSpecialSpawnTypeNone,
     Horse = 0x1,
 };
 

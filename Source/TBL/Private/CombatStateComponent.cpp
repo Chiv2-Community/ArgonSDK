@@ -185,8 +185,8 @@ void UCombatStateComponent::OnActivateTimer(float OverTime) {
 void UCombatStateComponent::OnAbilityInitiated(AAbilityInvocation* Invocation) {
 }
 
-void UCombatStateComponent::ManualReload() {
-}
+//void UCombatStateComponent::ManualReload() {
+//}
 
 bool UCombatStateComponent::IsUsingAttackTracers() const {
     return false;
