@@ -297,7 +297,7 @@ public:
     UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
     void Cinematics_StartAllowingControl(ATBLCharacter* Character);
     
-    UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
+    UFUNCTION(BlueprintNativeEvent)
     void Cinematics_ControllerPossessedPawn(ATBLPlayerController* Controller, ATBLCharacter* Pawn);
     
     UFUNCTION(BlueprintCallable, BlueprintImplementableEvent)

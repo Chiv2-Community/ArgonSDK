@@ -21,3 +21,5 @@ public:
     TBL_API FBehaviorSetOverride();
 };
 
+
+FORCEINLINE uint32 GetTypeHash(const FBehaviorSetOverride) { return 0; }

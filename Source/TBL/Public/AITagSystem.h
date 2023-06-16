@@ -26,29 +26,30 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FGameplayTag, FAIActorsByTag> ActorsByTag;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<TSoftClassPtr<AInventoryItem>, FBehaviorSetOverride> InventoryItemBehaviorSets;
+    // FIXME
+    // UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    // TMap<TSoftClassPtr<AInventoryItem>, FBehaviorSetOverride> InventoryItemBehaviorSets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<TSoftClassPtr<ASiegeEngine>, FBehaviorSetOverride> SiegeEngineBehaviorSets;
+    // UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    // TMap<TSoftClassPtr<ASiegeEngine>, FBehaviorSetOverride> SiegeEngineBehaviorSets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSet<FBehaviorSetOverride> ActiveAgathaBehaviorSets;
+    // UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    // TSet<FBehaviorSetOverride> ActiveAgathaBehaviorSets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSet<FBehaviorSetOverride> ActiveMasonBehaviorSets;
+    // UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    // TSet<FBehaviorSetOverride> ActiveMasonBehaviorSets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TSet<FBehaviorSetOverride> ActiveTenosiaBehaviorSets;
+    // UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    // TSet<FBehaviorSetOverride> ActiveTenosiaBehaviorSets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TMap<FGameplayTag, FTagBehaviorSetRow> TagBehaviorSets;
+    // UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    // TMap<FGameplayTag, FTagBehaviorSetRow> TagBehaviorSets;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
-    FSoftObjectPath TagBehaviorTablePath;
+    // UPROPERTY(BlueprintReadWrite, EditAnywhere, GlobalConfig, meta=(AllowPrivateAccess=true))
+    // FSoftObjectPath TagBehaviorTablePath;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    UDataTable* TagBehaviorTable;
+    // UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    // UDataTable* TagBehaviorTable;
     
 public:
     UAITagSystem();

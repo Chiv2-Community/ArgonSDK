@@ -18,3 +18,4 @@ public:
     TBL_API FRecentPlayerEntry();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FRecentPlayerEntry) { return 0; }

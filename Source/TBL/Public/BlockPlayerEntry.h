@@ -15,3 +15,4 @@ public:
     TBL_API FBlockPlayerEntry();
 };
 
+FORCEINLINE uint32 GetTypeHash(const FBlockPlayerEntry) { return 0; }

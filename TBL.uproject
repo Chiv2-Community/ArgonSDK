@@ -47,8 +47,7 @@
 			"Enabled": false,
 			"WhitelistPlatforms": [
 				"Win64"
-			],
-			"BlacklistPlatforms": []
+			]
 		},
 		{
 			"Name": "OnlineSubsystemUtils",
@@ -197,7 +196,7 @@
 		},
 		{
 			"Name": "MORT",
-			"Enabled": false,
+			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/f6a838d3c72b4d28b5635da50d3335e5"
 		},
 		{
@@ -387,7 +386,6 @@
 			"WhitelistPlatforms": [
 				"Win64"
 			],
-			"BlacklistPlatforms": [],
 			"BlacklistTargetConfigurations": [
 				"Shipping"
 			]
