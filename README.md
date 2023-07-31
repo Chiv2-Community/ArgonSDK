@@ -1,16 +1,17 @@
 # ArgonSDK
 
-- [Overview](#overview)
-- [TBL-code-only-docs](#tbl-code-only-docs)
-- [Asset Generation](#asset-generation)
+- [ArgonSDK](#argonsdk)
+  - [Overview](#overview)
+  - [TBL-code-only-docs](#tbl-code-only-docs)
+- [Asset generation](#asset-generation)
   - [Prerequisites](#prerequisites)
-  - [Installing Asset Generator](#installing-asset-generator)
+  - [Installing asset generator](#installing-asset-generator)
   - [Using the Asset Generator](#using-the-asset-generator)
   - [Result](#result)
-- [Mod Paking](#mod-paking)
-  - [Prerequisites](#prerequisites-1)
-  - [Step 1: Cooking](#step-1-cooking)
-  - [Step 2: Paking](#step-2-paking)
+- [mod paking](#mod-paking)
+  - [prerequisites](#prerequisites-1)
+  - [Step 1: cooking](#step-1-cooking)
+  - [Step 2: paking](#step-2-paking)
   - [Step 3: Installation](#step-3-installation)
 
 ## Overview
@@ -45,7 +46,7 @@ For using Chivalry assets in your custom maps/mods
 
 Drag and drop these folders from the UEAssetToolkit-Fixes **FBX-Only** branch into the plugins folder of the ArgonSDK Unreal project directory
 
-![Asset generator install location](docs-assets/assetGen/docs-assets/assetGenPluginsMove-annotated.png)
+![Asset generator install location](docs-assets/assetGen/assetGenPluginsMove-annotated.png)
 
 Open unreal engine, and browse to the location of your cloned ArgonSDK. Open the .uproject in that directory.
 
