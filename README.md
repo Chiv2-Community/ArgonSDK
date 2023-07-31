@@ -1,10 +1,26 @@
 # ArgonSDK
 
-This is a "pre-release" version containing only (TBL) Source code. 
+- [Overview](#overview)
+- [TBL-code-only-docs](#tbl-code-only-docs)
+- [Asset Generation](#asset-generation)
+  - [Prerequisites](#prerequisites)
+  - [Installing Asset Generator](#installing-asset-generator)
+  - [Using the Asset Generator](#using-the-asset-generator)
+  - [Result](#result)
+- [Mod Paking](#mod-paking)
+  - [Prerequisites](#prerequisites-1)
+  - [Step 1: Cooking](#step-1-cooking)
+  - [Step 2: Paking](#step-2-paking)
+  - [Step 3: Installation](#step-3-installation)
 
-Join https://discord.gg/rfGcyuVqvk to be notified when additional content and docs/guides are released.
+## Overview
+
+This is a "pre-release" version containing only (TBL) Source code.
+
+Join [Chiv2 Unchained Discord](https://discord.gg/chiv2unchained) to be notified when additional content and docs/guides are released.
 
 ## TBL-code-only-docs
+
 Generated Doxygen / Blueprint documentation is available here: https://github.com/Chiv2-Community/chiv2-tblcpp-obsidian-clean
 
 _Install Obsidian and open the folder as vault. Hint: Enable "Show existing files only" in the graph to hide variables_
