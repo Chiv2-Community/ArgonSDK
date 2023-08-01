@@ -140,7 +140,7 @@ For using Chivalry assets in your custom maps/mods
 
 1. Unreal engine 4.25 is installed
 2. ArgonSDK cloned
-3. UEAssetToolkit-Fixes FBX-only branch cloned
+3. [UEAssetToolkit-Fixes FBX-only branch](https://github.com/Buckminsterfullerene02/UEAssetToolkit-Fixes/tree/fbx-only) cloned
 4. Assets are un-paked
 5. These un-paked assets are serialized:
     * Texture2d
