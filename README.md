@@ -49,7 +49,12 @@ Unpaking Chivalry 2 game assets. This is the first of a three-step process for u
 
 1. Chivalry 2 installed
 2. Cloned [UEAssetToolkitGenerator](https://github.com/LongerWarrior/UEAssetToolkitGenerator)
-3. UE 4.25 bin added to system path (This is so we can use built-in unreal engine tools from the commandline)
+3. UE 4.25 bin folder added to system path (This is so we can use built-in unreal engine tools from the commandline)
+
+This is the path to your unreal bin folder:
+`C:\Path\to\unreal\install\UE_4.25\Engine\Binaries\Win64`
+
+[How to add it to system path](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
 
 ## UnPAKing the game
 We can use the UnPak tool provided with Unreal Engine. This project include a wrapper for it. Make a folder where you want the files to be unpaked to, and drag the `chiv2unpak.bat` file into it. Then, drag your Chivalry 2 root folder onto the batch file.
