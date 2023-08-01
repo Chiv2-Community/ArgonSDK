@@ -108,9 +108,6 @@ On the **Serialization Settings** tab, skip serializing all asset types except f
 * Font
 * FontFace
 * StaticMesh
-* Not strictly necessary, you can do these later:
-  * MaterialInstanceConstant
-  * MaterialParameterCollection
 
 ![Serialization Settings](docs-assets/serialize/Serialize-tab2.png)
 
