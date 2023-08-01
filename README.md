@@ -93,6 +93,7 @@ Preparing them for asset generation into Unreal Editor.
 
 1. Extracted game assets
 2. [UEAssetToolkitGenerator](https://github.com/LongerWarrior/UEAssetToolkitGenerator/releases) by LongerWarrior (CAS)
+   * make sure you download the release zip. Do not clone the source
 
 >[!caution]
 > I strongly recommend reading [the Wiki pages](https://github.com/LongerWarrior/UEAssetToolkitGenerator/wiki) on CAS, especially about the generation process order.
