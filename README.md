@@ -48,8 +48,7 @@ Unpaking Chivalry 2 game assets. This is the first of a three-step process for u
 ## prerequisites
 
 1. Chivalry 2 installed
-2. Cloned [UEAssetToolkitGenerator](https://github.com/LongerWarrior/UEAssetToolkitGenerator)
-3. UE 4.25 bin folder added to system path (This is so we can use built-in unreal engine tools from the commandline)
+2. UE 4.25 bin folder added to system path (This is so we can use built-in unreal engine tools from the commandline)
 
 This is the path to your unreal bin folder:
 `C:\Path\to\unreal\install\UE_4.25\Engine\Binaries\Win64`
