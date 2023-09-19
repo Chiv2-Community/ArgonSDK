@@ -1,0 +1,3 @@
+[submodule "Content/Mods/ArgonSDK"]
+	path = Content/Mods/ArgonSDK
+	url = git@github.com:Chiv2-Community/Unchained-Mods.git
