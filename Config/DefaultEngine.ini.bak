@@ -1,0 +1,760 @@
+[/Script/EngineSettings.GameMapsSettings]
+EditorStartupMap=/Game/Maps/StartupLevel.StartupLevel
+GameDefaultMap=/Game/Maps/Frontend/Frontend
+ServerDefaultMap=/Engine/Maps/Entry.Entry
+GameInstanceClass=/Script/TBL.TBLGameInstance
+GlobalDefaultGameMode=/Game/GameModes/Modes/StagedGameMode.StagedGameMode_C
+GlobalDefaultServerGameMode=/Game/GameModes/Modes/StagedGameMode.StagedGameMode_C
++GameModeMapPrefixes=(Name="TDM",GameMode=/Game/GameModes/Modes/Mode_TDM.Mode_TDM_C)
++GameModeMapPrefixes=(Name="test_TDM",GameMode=/Game/GameModes/Modes/Mode_TDM.Mode_TDM_C)
++GameModeMapPrefixes=(Name="TO",GameMode=/Game/GameModes/Modes/StagedGameMode.StagedGameMode_C)
++GameModeMapPrefixes=(Name="test_TO",GameMode=/Game/GameModes/Modes/StagedGameMode.StagedGameMode_C)
++GameModeMapPrefixes=(Name="FFA",GameMode=/Game/GameModes/Modes/Mode_FFA.Mode_FFA_C)
++GameModeMapPrefixes=(Name="test_FFA",GameMode=/Game/GameModes/Modes/Mode_FFA.Mode_FFA_C)
++GameModeMapPrefixes=(Name="test_Arena",GameMode=/Script/TBL.ArenaGameMode)
++GameModeMapPrefixes=(Name="Arena",GameMode=/Script/TBL.ArenaGameMode)
++GameModeClassAliases=(Name="TDM",GameMode=/Game/GameModes/Modes/Mode_TDM.Mode_TDM_C)
++GameModeClassAliases=(Name="FFA",GameMode=/Game/GameModes/Modes/Mode_FFA.Mode_FFA_C)
++GameModeClassAliases=(Name="TO",GameMode=/Game/GameModes/Modes/StagedGameMode.StagedGameMode_C)
++GameModeClassAliases=(Name="Arena",GameMode=/Script/TBL.ArenaGameMode)
+
+[/Script/HardwareTargeting.HardwareTargetingSettings]
+TargetedHardwareClass=Desktop
+AppliedTargetedHardwareClass=Desktop
+DefaultGraphicsPerformance=Maximum
+AppliedDefaultGraphicsPerformance=Maximum
+
+[/Script/Engine.Engine]
+GameUserSettingsClassName=/Script/TBL.TBLGameUserSettings
+GameSingletonClassName=/Script/TBL.TBLGameSingleton
+LocalPlayerClassName=/Script/TBL.TBLLocalPlayer
+GameEngine=/Script/TBL.TBLEngine
+; UnrealEdEngine=/Script/TBLEditor.TBLEditorEngine
+GameViewportClientClassName=/Script/TBL.TBLGameViewportClient
+ConsoleClassName=/Script/TBL.TBLConsole
+WorldSettingsClassName=/Script/TBL.TBLWorldSettings
+NearClipPlane=2.000000
+AssetManagerClassName=/Script/TBL.TBLAssetManager
+MinLightMapDensity=2.5
+IdealLightMapDensity=5
+MaxLightMapDensity=10
+DefaultBloomKernelTextureName=
+RuntimeMeshMergeSettingsName=/Game/Characters/Assets/CharRuntimeMeshMergeSettings.CharRuntimeMeshMergeSettings
+!NetDriverDefinitions=ClearArray
++NetDriverDefinitions=(DefName="GameNetDriver",DriverClassName="/Script/OnlineSubsystemUtils.IpNetDriver",DriverClassNameFallback="/Script/OnlineSubsystemUtils.IpNetDriver")
++NetDriverDefinitions=(DefName="BeaconNetDriver",DriverClassName="/Script/OnlineSubsystemUtils.IpNetDriver",DriverClassNameFallback="/Script/OnlineSubsystemUtils.IpNetDriver")
++NetDriverDefinitions=(DefName="DemoNetDriver",DriverClassName="/Script/Engine.DemoNetDriver",DriverClassNameFallback="/Script/Engine.DemoNetDriver")
+
+[CoreRedirects]
+; +ClassRedirects=(OldName="AnimGraphNode_BlendListByOrder",NewName="/Script/TBLEditor.AnimGraphNode_BlendListByOrder")
+; +ClassRedirects=(OldName="AnimGraphNode_BlendListByRandom",NewName="/Script/TBLEditor.AnimGraphNode_BlendListByRandom")
++ClassRedirects=(OldName="UAssemblyGraphSchema",NewName="/Script/Engine.UAssemblyGraphSchema")
++ClassRedirects=(OldName="/Script/TBL.FxBlueprint",NewName="/Script/Engine.Blueprint")
++ClassRedirects=(OldName="/Wwise/AnimNotify_AkEvent.AnimNotify_AkEvent_C",NewName="/Game/Animation/AnimNotifies/AnimNotify_TBLAudioEvent.AnimNotify_TBLAudioEvent_C")
++ClassRedirects=(OldName="HUDMarkerLocationInterface",NewName="HUDMarkerInterface")
++ClassRedirects=(OldName="BattleCryAbility",NewName="SpecialItemAbility")
++ClassRedirects=(OldName="BPI_Crosshair_C",NewName="/Script/TBL.TBLCrosshairInterface",OverrideClassName="/Script/CoreUObject.Class")
++StructRedirects=(OldName="AnimNode_BlendListByOrder",NewName="/Script/TBL.AnimNode_BlendListByOrder")
++StructRedirects=(OldName="AnimNode_BlendListByRandom",NewName="/Script/TBL.AnimNode_BlendListByRandom")
++StructRedirects=(OldName="/Game/GameModes/Stages/TDMStage/Rout.Rout",NewName="/Script/TBL.TDMRout")
++StructRedirects=(OldName="CustomizationRules",NewName="CustomizationAttributes")
++StructRedirects=(OldName="CustomizationRulesFilter",NewName="CustomizationAttributesFilter")
++PropertyRedirects=(OldName="BPF_Fx_C.GetCrosshair.ReturnValue",NewName="Crosshair")
++PropertyRedirects=(OldName="LODSkelMeshSkinWeights.LODWeights",NewName="LODSkelMeshSkinWeights.VertSetWeights")
++PropertyRedirects=(OldName="AttackType.AttackerBlockEffect",NewName="AttackType.BlockedPolicy")
++PropertyRedirects=(OldName="AttackType.OnHitEffect",NewName="AttackType.TargetHitEffect")
++PropertyRedirects=(OldName="AttackType.HorseHitEffect",NewName="AttackType.TargetHitEffectHorse")
++PropertyRedirects=(OldName="AttackType.DefenderBlockEffect",NewName="AttackType.TargetBlockEffect")
++PropertyRedirects=(OldName="AttackType.BlockedPolicy",NewName="AttackType.AttackerBlockedPolicy")
++PropertyRedirects=(OldName="AttackType.TargetBlockEffect",NewName="AttackType.DefenderBlockedPolicy")
++PropertyRedirects=(OldName="TBLCharacter.CustomizationComponent", NewName="TBLCharacter.CustomizationComponent_DEPRECATED")
++PropertyRedirects=(OldName="CTShield.ShieldAsset", NewName="CTShield.Asset")
++PropertyRedirects=(OldName="CTWeapon.WeaponAsset", NewName="CTWeapon.Asset")
++PropertyRedirects=(OldName="Rout.Delay", NewName="TDMRout.Delay")
++PropertyRedirects=(OldName="Rout.Duration", NewName="TDMRout.Duration")
++PropertyRedirects=(OldName="ParryEventState.bIsChamberBlock", NewName="ParryEventState.bIsCounterSuccess")
++PropertyRedirects=(OldName="AttackInfo.bIsChambering", NewName="AttackInfo.bIsCounterSuccess")
++PropertyRedirects=(OldName="AbilityConfig.ChamberingWindowTime", NewName="AbilityConfig.CounterWindowTime")
++PropertyRedirects=(OldName="AttackType.AttackerChamberBlockedPolicy", NewName="AttackType.AttackerCounteredPolicy")
++PropertyRedirects=(OldName="CombatState.EventBeginFire.AttackType",NewName="AttackName")
++PropertyRedirects=(OldName="CTBase.CustomizationRules", NewName="CTBase.CustomizationAttributes")
++PropertyRedirects=(OldName="TBLWorldSettings.BlueInitialSpawn", NewName="TBLWorldSettings.DefenderInitialSpawn")
++PropertyRedirects=(OldName="TBLWorldSettings.RedInitialSpawn", NewName="TBLWorldSettings.AttackerInitialSpawn")
++PropertyRedirects=(OldName="TBLWorldSettings.AgathaWarmupSequence", NewName="TBLWorldSettings.DefenderWarmupSequence")
++PropertyRedirects=(OldName="TBLWorldSettings.MasonWarmupSequence", NewName="TBLWorldSettings.AttackerWarmupSequence")
++EnumRedirects=(OldName="EFaction",ValueChanges=(("EFaction::Blue","EFaction::Agatha")) )
++EnumRedirects=(OldName="EFaction",ValueChanges=(("EFaction::Red","EFaction::Mason")) )
++EnumRedirects=(OldName="EAttackerBlockEffect",NewName="/Script/TBL.EBlockedPolicy")
++EnumRedirects=(OldName="EDefenderBlockEffect",NewName="/Script/TBL.ETargetBlockEffect")
++EnumRedirects=(OldName="ETargetBlockEffect",NewName="/Script/TBL.EDefenderBlockedPolicy")
++EnumRedirects=(OldName="EBlockedPolicy",NewName="/Script/TBL.EAttackerBlockedPolicy")
++EnumRedirects=(OldName="ECharacterControlStat",ValueChanges=(("ECharacterControlStat::TurnRatePercent","ECharacterControlStat::HorizontalTurnRatePercent")) )
++EnumRedirects=(OldName="EProConsoleOption",ValueChanges=(("EProConsoleOption::PreferResolution","EProConsoleOption::Fidelity")))
++EnumRedirects=(OldName="EProConsoleOption",ValueChanges=(("EProConsoleOption::PreferFramerate","EProConsoleOption::Balanced")))
++FunctionRedirects=(OldName="CombatStateComponent.IsInChamberingWindow",NewName="CombatStateComponent.IsInCounterWindow")
++FunctionRedirects=(OldName="GameplayRules.ShouldChamberBlock",NewName="GameplayRules.ShouldAttackBeCountered")
++FunctionRedirects=(OldName="GameplayRules.ShouldStartChamberingWindow",NewName="GameplayRules.ShouldStartCounterWindow")
++FunctionRedirects=(OldName="ConditionsComponent.GetDownedTimePercent",NewName="ConditionsComponent.GetDownedScorePercent")
++FunctionRedirects=(OldName="TBLCharacter.GetBattleCryAbility",NewName="TBLCharacter.GetSpecialItemAbility")
++FunctionRedirects=(OldName="BattleCryAbility.OnExecute",NewName="SpecialItemAbility.OnBattleCry")
++FunctionRedirects=(OldName="SpecialItemAbility.OnExecute",NewName="SpecialItemAbility.EventOnBattleCry")
++FunctionRedirects=(OldName="TBLLocalPlayer.CreateAndSendPartyInvitationToPlayerId",NewName="TBLLocalPlayer.SendPartyInvitationToPlayerId")
+
+[OnlineSubsystem]
+; DefaultPlatformService=RedpointEOS
+PollingIntervalInMs=20
+
+[OnlineSubsystemPlayFab]
+bEnabled=true
+ProductionEnvironmentUrl=.playfabapi.com
+TitleId=
+DeveloperSecretKey=
+
+[Voice]
+bEnabled=false
+
+[OnlineSubsystemSteam]
+bEnabled=true
+SteamDevAppId=1824220
+GameServerQueryPort=27015
+bRelaunchInSteam=false
+GameVersion=1.0.0.0
+bHasVoiceEnabled=false
+bUseSteamNetworking=false
+Achievement_0_Id=CAUSE_FALL_DEATH
+Achievement_1_Id=BE_REVIVED
+Achievement_2_Id=REVIVE_10
+Achievement_3_Id=MATCHWIN_AGATHA_10
+Achievement_4_Id=MATCHWIN_MASON_10
+Achievement_5_Id=MATCHWIN_DARKFOREST_5
+Achievement_6_Id=MATCHWIN_DARKFOREST_10
+Achievement_7_Id=MATCHWIN_DARKFOREST_25
+Achievement_8_Id=MATCHWIN_COXWELL_5
+Achievement_9_Id=MATCHWIN_COXWELL_10
+Achievement_10_Id=MATCHWIN_COXWELL_25
+Achievement_11_Id=MATCHWIN_LIONSPIRE_5
+Achievement_12_Id=MATCHWIN_LIONSPIRE_10
+Achievement_13_Id=MATCHWIN_LIONSPIRE_25
+Achievement_14_Id=MATCHWIN_CASTLESIEGE_5
+Achievement_15_Id=MATCHWIN_CASTLESIEGE_10
+Achievement_16_Id=MATCHWIN_CASTLESIEGE_25
+Achievement_17_Id=KILL_BASTARD_BASTARD
+Achievement_18_Id=KILL_50_SIEGE
+Achievement_19_Id=50_KILLS_1_MATCH
+Achievement_20_Id=KILL_FROM_100M
+Achievement_21_Id=KILL_100_VANGUARD
+Achievement_22_Id=KILL_100_FOOTMAN
+Achievement_23_Id=KILL_100_ARCHER
+Achievement_24_Id=KILL_100_KNIGHT
+Achievement_25_Id=KILL_10
+Achievement_26_Id=KILL_50
+Achievement_27_Id=KILL_100
+Achievement_28_Id=KILL_250
+Achievement_29_Id=KILL_500
+Achievement_30_Id=KILL_1000
+Achievement_31_Id=KILL_1500
+Achievement_32_Id=KILL_2000
+Achievement_33_Id=KILL_13_BREAD
+Achievement_34_Id=KILL_10_UNARMED
+Achievement_35_Id=KILL_2_UNDER_25
+Achievement_36_Id=FIRE_1000
+Achievement_37_Id=DIE_FIRE
+Achievement_38_Id=COUNTER_200
+Achievement_39_Id=DEFLECT_100
+Achievement_40_Id=BANDAGE_3X_1_LIFE
++CultureMappings=arabic;ar
++CultureMappings=schinese;zh-Hans
++CultureMappings=tchinese;zh-Hant
++CultureMappings=danish;da
++CultureMappings=dutch;nl
++CultureMappings=english;en
++CultureMappings=finnish;fi
++CultureMappings=french;fr
++CultureMappings=german;de
++CultureMappings=italian;it
++CultureMappings=japanese;ja
++CultureMappings=koreana;ko
++CultureMappings=norwegian;no
++CultureMappings=polish;pl
++CultureMappings=portuguese;pt
++CultureMappings=brazilian;pt
++CultureMappings=russian;ru
++CultureMappings=spanish;es
++CultureMappings=swedish;sv
++CultureMappings=turkish;tr
+
+[/Script/Engine.AISystemBase]
+; AISystemClassName=/Script/TBL.TBLAISystem
+bInstantiateAISystemOnClient=True
+
+[/Script/Engine.RendererSettings]
+r.ReflectionCaptureResolution=64
+r.ForwardShading=False
+r.EarlyZPassOnlyMaterialMasking=True
+r.AllowStaticLighting=True
+r.GenerateMeshDistanceFields=False
+r.CustomDepth=3
+r.DefaultFeature.AutoExposure.Method=1
+r.DefaultFeature.LensFlare=True
+bDefaultParticleCutouts=True
+r.MorphTarget.Mode=True
+r.WireframeCullThreshold=10.000000
+r.SupportLowQualityLightmaps=False
+r.MinScreenRadiusForLights=0.060000
+r.MinScreenRadiusForCSMDepth=0.020000
+r.GenerateLandscapeGIData=False
+foliage.ASyncInstaneBufferConversion=0
+t.TargetFrameTimeThreshold=17.2
+t.UnacceptableFrameTimeThreshold=45
+r.TemporalAA.Upsampling=1
+r.TextureStreaming=True
+Compat.UseDXT5NormalMaps=False
+r.ProfileGPU.Screenshot=0
+r.SkeletalMesh.SupportAdjacencyBuffers=0
+r.SupportDepthOnlyIndexBuffers=0
+r.SupportReversedIndexBuffers=0
+r.ForceStripAdjacencyDataDuringCooking=1
+r.StaticMesh.StripMinLodDataDuringCooking=1
+r.RayTracing=False
+r.SkinCache.CompileShaders=False
+r.RayTracing.HybridTranslucencySupport=1 ;This has to be enabled at startup, similar to r.RayTracing
+r.NGX.AppId=101022311
+
+[/Script/OnlineSubsystemSteam.SteamNetDriver]
+NetConnectionClassName=/Script/OnlineSubsystemSteam.SteamNetConnection
+
+[/Script/OnlineSubsystemUtils.IpNetDriver]
+InitialConnectTimeout=300.0
+ConnectionTimeout=15.0
+MaxClientRate=500000
+MaxInternetClientRate=300000
+NetServerMaxTickRate=30
+LanServerMaxTickRate=30
+bNoTimeouts=False
+ReplicationDriverClassName=/Script/TBL.TBLReplicationGraph
+MaxNetTickRate=60
+
+[/Script/Engine.Player]
+ConfiguredInternetSpeed=1000000
+ConfiguredLanSpeed=1000000
+
+[Analytics]
+ProviderModuleName=AnalyticsAWS
+
+[ConsoleVariables]
+tw.InactiveParticleOptimization=1
+r.Shadow.UnbuiltPreviewInGame=0
+r.LightPropagationVolume=0
+a.URO.ForceInterpolation=1
+tbs.ForceCharacterSignificance=-1
+r.TemporalAACurrentFrameWeight=0.1 ;default: 0.04
+Slate.PixelSnapRenderTranslation=0 ;0 means "turn off pixel snapping if a widget has any render transform at all"
+r.ForceDebugViewModes=0
+a.AnimInstancePool=1
+tbs.DelayGC=0
+r.ShaderDevelopmentMode=1
+tbs.Rep.Dependent.InventoryItem=1
+net.AllowEncryption=1
+net.AllowAsyncLoading=1
+DTLS.PreSharedKeys=0
+a.Budget.Enabled=1
+a.Budget.BudgetMS=5.0
+tbs.InventoryItemPool=0
+tbs.net.ThrottleSpawns=1
+Slate.EnableLayoutCachingInGame=1
+r.Streaming.UseBackgroundThreadPool=0 ; use the normal priority thread pool - mesh merging on background
+tbs.MaxGoreDecals=200
+tbs.ParallelSimulatedCharacters=1
+r.Shadow.ForceSingleSampleShadowingFromStationary=1 ; High quality shadows on movable objects at a distance
+Slate.EnableGlobalInvalidation=1
+Net.IsPushModelEnabled=1 ;1 turns on PushModel replication, should save server CPU in exchange for memory use (no effect on clients). This is 0 by default.
+tw.EnablePhysicsAssetPooling.Enable=1
+tw.EnableAsyncAimAssistTraces=1
+r.UsePreExposure=0 ;wehn 1, this is an RT cost, though it improves surface luminosity and camera exposure values when using "real-world" sun/sky brightness (with huge ranges)
+net.PingExcludeFrameTime=1
+r.UseUnbuiltWholeSceneDynamicShadowRadius=0 ;If 1, use r.Shadow.UnbuiltWholeSceneDynamicShadowRadius when lighting unbuilt (UE default)
+; Add support for GPU crash postmortem analysis
+r.GPUCrashDebugging=1
+r.GPUCrashDump=1
+r.GPUCrashDebugging.Aftermath.Markers=1
+r.GPUCrashDebugging.Aftermath.ResourceTracking=1
+r.gpucrash.collectionenable=1
+r.gpucrash.datadepth=3
+
+[/Script/Engine.PhysicsAssetWorldPool]
+NumToPrepopulate=64
++PhysicsAssetsToPrepopulate=/Game/Characters/BaseChar/SKM_BaseChar_ragdoll_physic.SKM_BaseChar_ragdoll_physic
++PhysicsAssetsToPrepopulate=/Game/Characters/BaseChar/SKM_BaseChar_ragdoll_physic_Skirt.SKM_BaseChar_ragdoll_physic_Skirt
+
+[/Script/UnrealEd.UnrealEdEngine]
++TemplateMapInfos=(ThumbnailTexture=Texture2D'/Game/Maps/defaultMap_01.defaultMap_01',Map="/Game/Maps/DefaultMap")
++TemplateMapInfos=(ThumbnailTexture=Texture2D'/Game/Maps/defaultMap_Landscape_01.defaultMap_Landscape_01',Map="/Game/Maps/DefaultMap_Landscape")
++TemplateMapInfos=(ThumbnailTexture=Texture2D'/Game/MapsTest/Templates/t_TO_template.t_TO_template',Map="/Game/MapsTest/Templates/test_TO_TeamObjectiveTemplate")
++TemplateMapInfos=(ThumbnailTexture=Texture2D'/Game/MapsTest/Templates/t_TDM_template.t_TDM_template',Map="/Game/MapsTest/Examples/Modes/TDM/test_TDM_TDMLevel")
++TemplateMapInfos=(ThumbnailTexture=Texture2D'/Game/MapsTest/Templates/t_Arena_template.t_Arena_template',Map="/Game/MapsTest/Examples/Modes/Arena/arena_minimal")
+-TemplateMapInfos=(ThumbnailTexture=Texture2D'/Engine/Maps/Templates/Thumbnails/Default.Default',Map="/Engine/Maps/Templates/Template_Default")
+-TemplateMapInfos=(ThumbnailTexture=Texture2D'/Engine/Maps/Templates/Thumbnails/VR-Basic.VR-Basic',Map="/Engine/Maps/Templates/VR-Basic")
+-PackagesToBeFullyLoadedAtStartup=/Engine/EngineMaterials/DefaultBloomKernel
+
+[SystemSettings]
+Slate.PixelSnapRenderTranslation=0
+
+[/Script/Engine.SkeletalMeshReductionSettings.CharacterLodSettings]
++Settings=(ScreenSize=1.0,RemovedBones=("b_LeftHandMiddle1","b_LeftHandMiddle2","b_LeftHandMiddle3","b_LeftHandPinky1","b_LeftHandPinky2","b_LeftHandPinky3","b_LeftInHandPinky","b_RightHandMiddle1","b_RightHandMiddle2","b_RightHandMiddle3","b_RightHandPinky1","b_RightHandPinky2","b_RightHandPinky3","b_RightInHandPinky"),RemovedBoneRemapping=(("b_LeftHandMiddle1","b_LeftHandRing1"),("b_LeftHandMiddle2","b_LeftHandRing2"),("b_LeftHandMiddle3","b_LeftHandRing3"),("b_LeftInHandPinky","b_LeftInHandRing"),("b_LeftHandPinky1","b_LeftHandRing1"),("b_LeftHandPinky2","b_LeftHandRing2"),("b_LeftHandPinky3","b_LeftHandRing3"),("b_RightHandMiddle1","b_RightHandRing1"),("b_RightHandMiddle2","b_RightHandRing2"),("b_RightHandMiddle3","b_RightHandRing3"),("b_RightInHandPinky","b_RightInHandRing"),("b_RightHandPinky1","b_RightHandRing1"),("b_RightHandPinky2","b_RightHandRing2"),("b_RightHandPinky3","b_RightHandRing3")),OptimizationSettings=(NumOfTrianglesPercentage=1.0,bTransferMorphTarget=True))
++Settings=(ScreenSize=0.3,RemovedBones=("b_LeftHandMiddle1","b_LeftHandMiddle2","b_LeftHandMiddle3","b_LeftHandPinky1","b_LeftHandPinky2","b_LeftHandPinky3","b_LeftInHandPinky","b_RightHandMiddle1","b_RightHandMiddle2","b_RightHandMiddle3","b_RightHandPinky1","b_RightHandPinky2","b_RightHandPinky3","b_RightInHandPinky","b_BackHair_02","b_ClothBL_2","b_ClothBL_4","b_ClothBL_6","b_ClothBR_2","b_ClothBR_4","b_ClothBR_6","b_ClothB_2","b_ClothB_4","b_ClothB_6","b_ClothLF_2","b_ClothLF_4","b_ClothLF_6","b_ClothL_2","b_ClothL_4","b_ClothL_6","b_ClothRF_2","b_ClothRF_4","b_ClothRF_6","b_ClothR_2","b_ClothR_4","b_ClothR_6","b_Facial_EyeBall_Left","b_Facial_EyeBall_Right","b_LeftArmRoll_B","b_LeftBackHair_02","b_LeftElbow","b_LeftElbow_Helper","b_LeftForeArmRoll_A","b_LeftForeArmRoll_B","b_LeftHair_02","b_LeftHandIndex2","b_LeftHandIndex3","b_LeftHandRing2","b_LeftHandRing3","b_LeftHandThumb2","b_LeftHandThumb3","b_LeftHipRoll","b_LeftKnee","b_LeftKnee_Help","b_LeftLegRoll","b_LeftToeEnd","b_LeftUpLegRoll","b_PigTail_03","b_PigTail_04","b_RightArmRoll_B","b_RightBackHair_02","b_RightElbow","b_RightElbow_Helper","b_RightForeArmRoll_A","b_RightForeArmRoll_B","b_RightFrontHair_02","b_RightHair_02","b_RightHandIndex2","b_RightHandIndex3","b_RightHandRing2","b_RightHandRing3","b_RightHandThumb2","b_RightHandThumb3","b_RightHipRoll","b_RightKnee","b_RightKnee_Help","b_RightLegRoll","b_RightToeEnd","b_RightUpLegRoll"),RemovedBoneRemapping=(("b_LeftHandMiddle1","b_LeftHandRing1"),("b_LeftHandMiddle2","b_LeftHandRing1"),("b_LeftHandMiddle3","b_LeftHandRing1"),("b_LeftInHandPinky","b_LeftInHandRing"),("b_LeftHandPinky1","b_LeftHandRing1"),("b_LeftHandPinky2","b_LeftHandRing1"),("b_LeftHandPinky3","b_LeftHandRing1"),("b_RightHandMiddle1","b_RightHandRing1"),("b_RightHandMiddle2","b_RightHandRing1"),("b_RightHandMiddle3","b_RightHandRing1"),("b_RightInHandPinky","b_RightInHandRing"),("b_RightHandPinky1","b_RightHandRing1"),("b_RightHandPinky2","b_RightHandRing1"),("b_RightHandPinky3","b_RightHandRing1")),OptimizationSettings=(NumOfTrianglesPercentage=0.5,bTransferMorphTarget=True))
++Settings=(ScreenSize=0.1,RemovedBones=("b_LeftHandMiddle1","b_LeftHandMiddle2","b_LeftHandMiddle3","b_LeftHandPinky1","b_LeftHandPinky2","b_LeftHandPinky3","b_LeftInHandPinky","b_RightHandMiddle1","b_RightHandMiddle2","b_RightHandMiddle3","b_RightHandPinky1","b_RightHandPinky2","b_RightHandPinky3","b_RightInHandPinky","b_BackHair_02","b_ClothBL_2","b_ClothBL_4","b_ClothBL_6","b_ClothBR_2","b_ClothBR_4","b_ClothBR_6","b_ClothB_2","b_ClothB_4","b_ClothB_6","b_ClothLF_2","b_ClothLF_4","b_ClothLF_6","b_ClothL_2","b_ClothL_4","b_ClothL_6","b_ClothRF_2","b_ClothRF_4","b_ClothRF_6","b_ClothR_2","b_ClothR_4","b_ClothR_6","b_Facial_EyeBall_Left","b_Facial_EyeBall_Right","b_LeftArmRoll_B","b_LeftBackHair_02","b_LeftElbow","b_LeftElbow_Helper","b_LeftForeArmRoll_A","b_LeftForeArmRoll_B","b_LeftHair_02","b_LeftHandIndex2","b_LeftHandIndex3","b_LeftHandRing2","b_LeftHandRing3","b_LeftHandThumb2","b_LeftHandThumb3","b_LeftHipRoll","b_LeftKnee","b_LeftKnee_Help","b_LeftLegRoll","b_LeftToeEnd","b_LeftUpLegRoll","b_PigTail_03","b_PigTail_04","b_RightArmRoll_B","b_RightBackHair_02","b_RightElbow","b_RightElbow_Helper","b_RightForeArmRoll_A","b_RightForeArmRoll_B","b_RightFrontHair_02","b_RightHair_02","b_RightHandIndex2","b_RightHandIndex3","b_RightHandRing2","b_RightHandRing3","b_RightHandThumb2","b_RightHandThumb3","b_RightHipRoll","b_RightKnee","b_RightKnee_Help","b_RightLegRoll","b_RightToeEnd","b_RightUpLegRoll","b_BackHair_01","b_Facial_Jaw","b_Foot_IK_L","b_Helmet","b_Foot_IK_Pelvis","b_Foot_IK_R","b_Foot_IK_Root","b_World_HandIK_L","b_World_HandIK_R","b_World_HandIK_Root","b_LeftArmRoll_A","b_LeftBackHair_01","b_LeftFrontHair_01","b_LeftHair_01","b_LeftHandIndex1","b_LeftHandThumb1","b_LeftInHandRing","b_LeftShoulderPad","b_LeftShoulder_Roll","b_LeftToeBase","b_PelvisAttach_Back","b_PelvisAttach_Left","b_PelvisAttach_Right","b_PigTail_01","b_RightArmRoll_A","b_RightBackHair_01","b_RightFrontHair_01","b_RightHair_01","b_RightHandIndex1","b_RightHandThumb1","b_RightInHandRing","b_RightShoulderPad","b_RightShoulder_Roll","b_RightToeBase","b_SpineAttach_Left","b_SpineAttach_Right"),RemovedBoneRemapping=(("b_LeftHandMiddle1","b_LeftHandRing1"),("b_LeftHandMiddle2","b_LeftHandRing1"),("b_LeftHandMiddle3","b_LeftHandRing1"),("b_LeftInHandPinky","b_LeftInHandRing"),("b_LeftHandPinky1","b_LeftHandRing1"),("b_LeftHandPinky2","b_LeftHandRing1"),("b_LeftHandPinky3","b_LeftHandRing1"),("b_RightHandMiddle1","b_RightHandRing1"),("b_RightHandMiddle2","b_RightHandRing1"),("b_RightHandMiddle3","b_RightHandRing1"),("b_RightInHandPinky","b_RightInHandRing"),("b_RightHandPinky1","b_RightHandRing1"),("b_RightHandPinky2","b_RightHandRing1"),("b_RightHandPinky3","b_RightHandRing1")),OptimizationSettings=(NumOfTrianglesPercentage=0.1,bTransferMorphTarget=True))
++Settings=(ScreenSize=0.05,RemovedBones=("b_LeftHandMiddle1","b_LeftHandMiddle2","b_LeftHandMiddle3","b_LeftHandPinky1","b_LeftHandPinky2","b_LeftHandPinky3","b_LeftInHandPinky","b_RightHandMiddle1","b_RightHandMiddle2","b_RightHandMiddle3","b_RightHandPinky1","b_RightHandPinky2","b_RightHandPinky3","b_RightInHandPinky","b_BackHair_02","b_ClothBL_2","b_ClothBL_4","b_ClothBL_6","b_ClothBR_2","b_ClothBR_4","b_ClothBR_6","b_ClothB_2","b_ClothB_4","b_ClothB_6","b_ClothLF_2","b_ClothLF_4","b_ClothLF_6","b_ClothL_2","b_ClothL_4","b_ClothL_6","b_ClothRF_2","b_ClothRF_4","b_ClothRF_6","b_ClothR_2","b_ClothR_4","b_ClothR_6","b_Facial_EyeBall_Left","b_Facial_EyeBall_Right","b_LeftArmRoll_B","b_LeftBackHair_02","b_LeftElbow","b_LeftElbow_Helper","b_LeftForeArmRoll_A","b_LeftForeArmRoll_B","b_LeftHair_02","b_LeftHandIndex2","b_LeftHandIndex3","b_LeftHandRing2","b_LeftHandRing3","b_LeftHandThumb2","b_LeftHandThumb3","b_LeftHipRoll","b_LeftKnee","b_LeftKnee_Help","b_LeftLegRoll","b_LeftToeEnd","b_LeftUpLegRoll","b_PigTail_03","b_PigTail_04","b_RightArmRoll_B","b_RightBackHair_02","b_RightElbow","b_RightElbow_Helper","b_RightForeArmRoll_A","b_RightForeArmRoll_B","b_RightFrontHair_02","b_RightHair_02","b_RightHandIndex2","b_RightHandIndex3","b_RightHandRing2","b_RightHandRing3","b_RightHandThumb2","b_RightHandThumb3","b_RightHipRoll","b_RightKnee","b_RightKnee_Help","b_RightLegRoll","b_RightToeEnd","b_RightUpLegRoll","b_BackHair_01","b_Facial_Jaw","b_Foot_IK_L","b_Helmet","b_Foot_IK_Pelvis","b_Foot_IK_R","b_Foot_IK_Root","b_World_HandIK_L","b_World_HandIK_R","b_World_HandIK_Root","b_LeftArmRoll_A","b_LeftBackHair_01","b_LeftFrontHair_01","b_LeftHair_01","b_LeftHandIndex1","b_LeftHandThumb1","b_LeftInHandRing","b_LeftShoulderPad","b_LeftShoulder_Roll","b_LeftToeBase","b_PelvisAttach_Back","b_PelvisAttach_Left","b_PelvisAttach_Right","b_PigTail_01","b_RightArmRoll_A","b_RightBackHair_01","b_RightFrontHair_01","b_RightHair_01","b_RightHandIndex1","b_RightHandThumb1","b_RightInHandRing","b_RightShoulderPad","b_RightShoulder_Roll","b_RightToeBase","b_SpineAttach_Left","b_SpineAttach_Right","b_ArmorHelp_Hips_B","b_ArmorHelp_Hips_L","b_ArmorHelp_Hips_R","b_ClothBL_1","b_ClothBL_3","b_ClothBL_5","b_ClothBR_1","b_ClothBR_3","b_ClothBR_5","b_ClothB_1","b_ClothB_3","b_ClothB_5","b_ClothLF_1","b_ClothLF_3","b_ClothLF_5","b_ClothL_1","b_ClothL_3","b_ClothL_5","b_ClothRF_1","b_ClothRF_3","b_ClothRF_5","b_ClothR_1","b_ClothR_3","b_ClothR_5","b_GrabSpot","b_SkirtBase","b_Spine_Helper","b_UpperRoot","b_UpperRoot_Neck"),RemovedBoneRemapping=(("b_LeftHandMiddle1","b_LeftHandRing1"),("b_LeftHandMiddle2","b_LeftHandRing1"),("b_LeftHandMiddle3","b_LeftHandRing1"),("b_LeftInHandPinky","b_LeftInHandRing"),("b_LeftHandPinky1","b_LeftHandRing1"),("b_LeftHandPinky2","b_LeftHandRing1"),("b_LeftHandPinky3","b_LeftHandRing1"),("b_RightHandMiddle1","b_RightHandRing1"),("b_RightHandMiddle2","b_RightHandRing1"),("b_RightHandMiddle3","b_RightHandRing1"),("b_RightInHandPinky","b_RightInHandRing"),("b_RightHandPinky1","b_RightHandRing1"),("b_RightHandPinky2","b_RightHandRing1"),("b_RightHandPinky3","b_RightHandRing1"),("b_ClothLF_1","b_LeftUpLeg"),("b_ClothLF_2","b_LeftUpLeg"),("b_ClothLF_3","b_LeftUpLeg"),("b_ClothLF_4","b_LeftLeg"),("b_ClothLF_5","b_LeftLeg"),("b_ClothLF_6","b_LeftLeg"),("b_ClothL_1","b_LeftUpLeg"),("b_ClothL_2","b_LeftUpLeg"),("b_ClothL_3","b_LeftUpLeg"),("b_ClothL_4","b_LeftLeg"),("b_ClothL_5","b_LeftLeg"),("b_ClothL_6","b_LeftLeg"),("b_ClothBL_1","b_LeftUpLeg"),("b_ClothBL_2","b_LeftUpLeg"),("b_ClothBL_3","b_LeftUpLeg"),("b_ClothBL_4","b_LeftLeg"),("b_ClothBL_5","b_LeftLeg"),("b_ClothBL_6","b_LeftLeg"),("b_ClothRF_1","b_RightUpLeg"),("b_ClothRF_2","b_RightUpLeg"),("b_ClothRF_3","b_RightUpLeg"),("b_ClothRF_4","b_RightLeg"),("b_ClothRF_5","b_RightLeg"),("b_ClothRF_6","b_RightLeg"),("b_ClothR_1","b_RightUpLeg"),("b_ClothR_2","b_RightUpLeg"),("b_ClothR_3","b_RightUpLeg"),("b_ClothR_4","b_RightLeg"),("b_ClothR_5","b_RightLeg"),("b_ClothR_6","b_RightLeg"),("b_ClothBR_1","b_RightUpLeg"),("b_ClothBR_2","b_RightUpLeg"),("b_ClothBR_3","b_RightUpLeg"),("b_ClothBR_4","b_RightLeg"),("b_ClothBR_5","b_RightLeg"),("b_ClothBR_6","b_RightLeg"),("b_ArmorHelp_Hips_L","b_LeftUpLeg"),("b_ArmorHelp_Hips_R","b_RightUpLeg")),OptimizationSettings=(NumOfTrianglesPercentage=0.01,bTransferMorphTarget=True))
++Settings=(ScreenSize=0.01,RemovedBones=("b_LeftHandMiddle1","b_LeftHandMiddle2","b_LeftHandMiddle3","b_LeftHandPinky1","b_LeftHandPinky2","b_LeftHandPinky3","b_LeftInHandPinky","b_RightHandMiddle1","b_RightHandMiddle2","b_RightHandMiddle3","b_RightHandPinky1","b_RightHandPinky2","b_RightHandPinky3","b_RightInHandPinky","b_BackHair_02","b_ClothBL_2","b_ClothBL_4","b_ClothBL_6","b_ClothBR_2","b_ClothBR_4","b_ClothBR_6","b_ClothB_2","b_ClothB_4","b_ClothB_6","b_ClothLF_2","b_ClothLF_4","b_ClothLF_6","b_ClothL_2","b_ClothL_4","b_ClothL_6","b_ClothRF_2","b_ClothRF_4","b_ClothRF_6","b_ClothR_2","b_ClothR_4","b_ClothR_6","b_Facial_EyeBall_Left","b_Facial_EyeBall_Right","b_LeftArmRoll_B","b_LeftBackHair_02","b_LeftElbow","b_LeftElbow_Helper","b_LeftForeArmRoll_A","b_LeftForeArmRoll_B","b_LeftHair_02","b_LeftHandIndex2","b_LeftHandIndex3","b_LeftHandRing2","b_LeftHandRing3","b_LeftHandThumb2","b_LeftHandThumb3","b_LeftHipRoll","b_LeftKnee","b_LeftKnee_Help","b_LeftLegRoll","b_LeftToeEnd","b_LeftUpLegRoll","b_PigTail_03","b_PigTail_04","b_RightArmRoll_B","b_RightBackHair_02","b_RightElbow","b_RightElbow_Helper","b_RightForeArmRoll_A","b_RightForeArmRoll_B","b_RightFrontHair_02","b_RightHair_02","b_RightHandIndex2","b_RightHandIndex3","b_RightHandRing2","b_RightHandRing3","b_RightHandThumb2","b_RightHandThumb3","b_RightHipRoll","b_RightKnee","b_RightKnee_Help","b_RightLegRoll","b_RightToeEnd","b_RightUpLegRoll","b_BackHair_01","b_Facial_Jaw","b_Foot_IK_L","b_Helmet","b_Foot_IK_Pelvis","b_Foot_IK_R","b_Foot_IK_Root","b_World_HandIK_L","b_World_HandIK_R","b_World_HandIK_Root","b_LeftArmRoll_A","b_LeftBackHair_01","b_LeftFrontHair_01","b_LeftHair_01","b_LeftHandIndex1","b_LeftHandThumb1","b_LeftInHandRing","b_LeftShoulderPad","b_LeftShoulder_Roll","b_LeftToeBase","b_PelvisAttach_Back","b_PelvisAttach_Left","b_PelvisAttach_Right","b_PigTail_01","b_RightArmRoll_A","b_RightBackHair_01","b_RightFrontHair_01","b_RightHair_01","b_RightHandIndex1","b_RightHandThumb1","b_RightInHandRing","b_RightShoulderPad","b_RightShoulder_Roll","b_RightToeBase","b_SpineAttach_Left","b_SpineAttach_Right","b_ArmorHelp_Hips_B","b_ArmorHelp_Hips_L","b_ArmorHelp_Hips_R","b_ClothBL_1","b_ClothBL_3","b_ClothBL_5","b_ClothBR_1","b_ClothBR_3","b_ClothBR_5","b_ClothB_1","b_ClothB_3","b_ClothB_5","b_ClothLF_1","b_ClothLF_3","b_ClothLF_5","b_ClothL_1","b_ClothL_3","b_ClothL_5","b_ClothRF_1","b_ClothRF_3","b_ClothRF_5","b_ClothR_1","b_ClothR_3","b_ClothR_5","b_GrabSpot","b_SkirtBase","b_Spine_Helper","b_UpperRoot","b_UpperRoot_Neck"),RemovedBoneRemapping=(("b_LeftHandMiddle1","b_LeftHandRing1"),("b_LeftHandMiddle2","b_LeftHandRing1"),("b_LeftHandMiddle3","b_LeftHandRing1"),("b_LeftInHandPinky","b_LeftInHandRing"),("b_LeftHandPinky1","b_LeftHandRing1"),("b_LeftHandPinky2","b_LeftHandRing1"),("b_LeftHandPinky3","b_LeftHandRing1"),("b_RightHandMiddle1","b_RightHandRing1"),("b_RightHandMiddle2","b_RightHandRing1"),("b_RightHandMiddle3","b_RightHandRing1"),("b_RightInHandPinky","b_RightInHandRing"),("b_RightHandPinky1","b_RightHandRing1"),("b_RightHandPinky2","b_RightHandRing1"),("b_RightHandPinky3","b_RightHandRing1"),("b_ClothLF_1","b_LeftUpLeg"),("b_ClothLF_2","b_LeftUpLeg"),("b_ClothLF_3","b_LeftUpLeg"),("b_ClothLF_4","b_LeftLeg"),("b_ClothLF_5","b_LeftLeg"),("b_ClothLF_6","b_LeftLeg"),("b_ClothL_1","b_LeftUpLeg"),("b_ClothL_2","b_LeftUpLeg"),("b_ClothL_3","b_LeftUpLeg"),("b_ClothL_4","b_LeftLeg"),("b_ClothL_5","b_LeftLeg"),("b_ClothL_6","b_LeftLeg"),("b_ClothBL_1","b_LeftUpLeg"),("b_ClothBL_2","b_LeftUpLeg"),("b_ClothBL_3","b_LeftUpLeg"),("b_ClothBL_4","b_LeftLeg"),("b_ClothBL_5","b_LeftLeg"),("b_ClothBL_6","b_LeftLeg"),("b_ClothRF_1","b_RightUpLeg"),("b_ClothRF_2","b_RightUpLeg"),("b_ClothRF_3","b_RightUpLeg"),("b_ClothRF_4","b_RightLeg"),("b_ClothRF_5","b_RightLeg"),("b_ClothRF_6","b_RightLeg"),("b_ClothR_1","b_RightUpLeg"),("b_ClothR_2","b_RightUpLeg"),("b_ClothR_3","b_RightUpLeg"),("b_ClothR_4","b_RightLeg"),("b_ClothR_5","b_RightLeg"),("b_ClothR_6","b_RightLeg"),("b_ClothBR_1","b_RightUpLeg"),("b_ClothBR_2","b_RightUpLeg"),("b_ClothBR_3","b_RightUpLeg"),("b_ClothBR_4","b_RightLeg"),("b_ClothBR_5","b_RightLeg"),("b_ClothBR_6","b_RightLeg"),("b_ArmorHelp_Hips_L","b_LeftUpLeg"),("b_ArmorHelp_Hips_R","b_RightUpLeg")),OptimizationSettings=(NumOfTrianglesPercentage=0.01,bTransferMorphTarget=True))
+
+[/Script/Engine.SkeletalMeshReductionSettings.MountLodSettings]
++Settings=(ScreenSize=1.0,RemovedBones=("bh_NeckHair_Top3","bh_NeckHair_Mid3","bh_NeckHair_Low3","bh_RightEye","bh_LeftEye","bh_Cloth_FL_A_3_sim","bh_Cloth_FL_B_3_sim","bh_Cloth_BL_A_3_sim","bh_Cloth_BL_B_3_sim","bh_Cloth_BL_C_3_sim","bh_Cloth_FR_A_3_sim","bh_Cloth_FR_B_3_sim","bh_Cloth_BR_A_3_sim","bh_Cloth_BR_B_3_sim","bh_Cloth_BR_C_3_sim","bh_TailEnd_sim"),RemovedBoneRemapping=(("bh_RightEye","bh_Head"),("bh_LeftEye","bh_Head"),("bh_NeckHair_Top3","bh_NeckHair_Top2"),("bh_NeckHair_Mid3","bh_NeckHair_Mid2"),("bh_NeckHair_Low3","bh_NeckHair_Low2"),("bh_Cloth_FL_A_3_sim","bh_Cloth_FL_A_2"),("bh_Cloth_FL_B_3_sim","bh_Cloth_FL_B_2"),("bh_Cloth_BL_A_3_sim","bh_Cloth_BL_A_2"),("bh_Cloth_BL_B_3_sim","bh_Cloth_BL_B_2"),("bh_Cloth_BL_C_3_sim","bh_Cloth_BL_C_2"),("bh_Cloth_FR_A_3_sim","bh_Cloth_FR_A_2"),("bh_Cloth_FR_B_3_sim","bh_Cloth_FR_B_2"),("bh_Cloth_BR_A_3_sim","bh_Cloth_BR_A_2"),("bh_Cloth_BR_B_3_sim","bh_Cloth_BR_B_2"),("bh_Cloth_BR_C_3_sim","bh_Cloth_BR_C_2"),("bh_TailEnd_sim","bh_TailEnd")),OptimizationSettings=(NumOfTrianglesPercentage=1.0,bTransferMorphTarget=True))
++Settings=(ScreenSize=0.3,RemovedBones=("bh_NeckHair_Top3","bh_NeckHair_Mid3","bh_NeckHair_Low3","bh_RightEye","bh_LeftEye","bh_Cloth_FL_A_3_sim","bh_Cloth_FL_B_3_sim","bh_Cloth_BL_A_3_sim","bh_Cloth_BL_B_3_sim","bh_Cloth_BL_C_3_sim","bh_Cloth_FR_A_3_sim","bh_Cloth_FR_B_3_sim","bh_Cloth_BR_A_3_sim","bh_Cloth_BR_B_3_sim","bh_Cloth_BR_C_3_sim","bh_TailEnd_sim","bh_RightEar","bh_LeftEar","bh_LipTop","bh_LipLow","bh_LeftFingerEnd","bh_RightFingerEnd","bh_LeftToeEnd","bh_RightToeEnd","bh_TailEnd","bh_LeftThigh_Roll","bh_RightThigh_Roll"),RemovedBoneRemapping=(("bh_RightEye","bh_Head"),("bh_LeftEye","bh_Head"),("bh_NeckHair_Top3","bh_NeckHair_Top2"),("bh_NeckHair_Mid3","bh_NeckHair_Mid2"),("bh_NeckHair_Low3","bh_NeckHair_Low2"),("bh_Cloth_FL_A_3_sim","bh_Cloth_FL_A_2"),("bh_Cloth_FL_B_3_sim","bh_Cloth_FL_B_2"),("bh_Cloth_BL_A_3_sim","bh_Cloth_BL_A_2"),("bh_Cloth_BL_B_3_sim","bh_Cloth_BL_B_2"),("bh_Cloth_BL_C_3_sim","bh_Cloth_BL_C_2"),("bh_Cloth_FR_A_3_sim","bh_Cloth_FR_A_2"),("bh_Cloth_FR_B_3_sim","bh_Cloth_FR_B_2"),("bh_Cloth_BR_A_3_sim","bh_Cloth_BR_A_2"),("bh_Cloth_BR_B_3_sim","bh_Cloth_BR_B_2"),("bh_Cloth_BR_C_3_sim","bh_Cloth_BR_C_2"),("bh_TailEnd_sim","bh_TailEnd"),("bh_RightEar","bh_Head"),("bh_LeftEar","bh_Head"),("bh_LipTop","bh_Head"),("bh_LipLow","bh_Head"),("bh_LeftFingerEnd","bh_LeftFinger"),("bh_RightFingerEnd","bh_RightFinger"),("bh_LeftToeEnd","bh_LeftToe"),("bh_RightToeEnd","bh_RightToe"),("bh_TailEnd","bh_Tail03"),("bh_LeftThigh_Roll","bh_Hip"),("bh_RightThigh_Roll","bh_Hip")),OptimizationSettings=(NumOfTrianglesPercentage=0.5,bTransferMorphTarget=True))
++Settings=(ScreenSize=0.1,RemovedBones=("bh_NeckHair_Top3","bh_NeckHair_Mid3","bh_NeckHair_Low3","bh_RightEye","bh_LeftEye","bh_Cloth_FL_A_3_sim","bh_Cloth_FL_B_3_sim","bh_Cloth_BL_A_3_sim","bh_Cloth_BL_B_3_sim","bh_Cloth_BL_C_3_sim","bh_Cloth_FR_A_3_sim","bh_Cloth_FR_B_3_sim","bh_Cloth_BR_A_3_sim","bh_Cloth_BR_B_3_sim","bh_Cloth_BR_C_3_sim","bh_TailEnd_sim","bh_RightEar","bh_LeftEar","bh_LipTop","bh_LipLow","bh_LeftFingerEnd","bh_RightFingerEnd","bh_LeftToeEnd","bh_RightToeEnd","bh_TailEnd","bh_LeftThigh_Roll","bh_RightThigh_Roll","bh_Cloth_FL_A_1","bh_Cloth_FL_B_1","bh_Cloth_BL_A_1","bh_Cloth_BL_B_1","bh_Cloth_BL_C_1","bh_Cloth_FR_A_1","bh_Cloth_FR_B_1","bh_Cloth_BR_A_1","bh_Cloth_BR_B_1","bh_Cloth_BR_C_1","bh_Cloth_FL_A_2","bh_Cloth_FL_B_2","bh_Cloth_BL_A_2","bh_Cloth_BL_B_2","bh_Cloth_BL_C_2","bh_Cloth_FR_A_2","bh_Cloth_FR_B_2","bh_Cloth_BR_A_2","bh_Cloth_BR_B_2","bh_Cloth_BR_C_2","bh_LeftStirrup","bh_LeftStirrupEnd","bh_RightStirrup","bh_RightStirrupEnd","bh_HandPlace_Left","bh_HandPlace_Right","bh_NeckRope_R","bh_NeckRope_L","bh_Neck1_Roll","bh_Neck2_FixPos","bh_Neck_FixPos","bh_Spine1_Roll","bh_ChestArmor","bh_Tail03","bh_LeftFinger","bh_RightFinger","bh_LeftToe","bh_RightToe","bh_RearIK_R","bh_RearIK_L","bh_FrontIK_R","bh_FrontIK_L","bh_LegIK_Root","bh_Jaw"),RemovedBoneRemapping=(("bh_RightEye","bh_Head"),("bh_LeftEye","bh_Head"),("bh_NeckHair_Top3","bh_NeckHair_Top2"),("bh_NeckHair_Mid3","bh_NeckHair_Mid2"),("bh_NeckHair_Low3","bh_NeckHair_Low2"),("bh_Cloth_FL_A_3_sim","bh_Cloth_FL_A_2"),("bh_Cloth_FL_B_3_sim","bh_Cloth_FL_B_2"),("bh_Cloth_BL_A_3_sim","bh_Cloth_BL_A_2"),("bh_Cloth_BL_B_3_sim","bh_Cloth_BL_B_2"),("bh_Cloth_BL_C_3_sim","bh_Cloth_BL_C_2"),("bh_Cloth_FR_A_3_sim","bh_Cloth_FR_A_2"),("bh_Cloth_FR_B_3_sim","bh_Cloth_FR_B_2"),("bh_Cloth_BR_A_3_sim","bh_Cloth_BR_A_2"),("bh_Cloth_BR_B_3_sim","bh_Cloth_BR_B_2"),("bh_Cloth_BR_C_3_sim","bh_Cloth_BR_C_2"),("bh_TailEnd_sim","bh_TailEnd"),("bh_RightEar","bh_Head"),("bh_LeftEar","bh_Head"),("bh_LipTop","bh_Head"),("bh_LipLow","bh_Head"),("bh_LeftFingerEnd","bh_LeftFinger"),("bh_RightFingerEnd","bh_RightFinger"),("bh_LeftToeEnd","bh_LeftToe"),("bh_RightToeEnd","bh_RightToe"),("bh_TailEnd","bh_Tail03"),("bh_LeftThigh_Roll","bh_Hip"),("bh_RightThigh_Roll","bh_Hip"),("bh_Cloth_FL_A_1","bh_LeftUpArm"),("bh_Cloth_FL_B_1","bh_Spine1"),("bh_Cloth_BL_A_1","bh_Spine1"),("bh_Cloth_BL_B_1","bh_LeftThigh"),("bh_Cloth_BL_C_1","bh_LeftThigh"),("bh_Cloth_FR_A_1","bh_RightUpArm"),("bh_Cloth_FR_B_1","bh_Spine1"),("bh_Cloth_BR_A_1","bh_Spine1"),("bh_Cloth_BR_B_1","bh_RightThigh"),("bh_Cloth_BR_C_1","bh_RightThigh"),("bh_Cloth_FL_A_2","bh_LeftForearm"),("bh_Cloth_FL_B_2","bh_Spine1"),("bh_Cloth_BL_A_2","bh_Spine1"),("bh_Cloth_BL_B_2","bh_LeftLeg"),("bh_Cloth_BL_C_2","bh_LeftFoot"),("bh_Cloth_FR_A_2","bh_RightUpArm"),("bh_Cloth_FR_B_2","bh_Spine1"),("bh_Cloth_BR_A_2","bh_Spine1"),("bh_Cloth_BR_B_2","bh_RightLeg"),("bh_Cloth_BR_C_2","bh_RightFoot"),("bh_LeftStirrup","bh_Spine1"),("bh_LeftStirrupEnd","bh_Spine1"),("bh_RightStirrup","bh_Spine1"),("bh_RightStirrupEnd","bh_Spine1"),("bh_HandPlace_Left","bh_Spine1"),("bh_HandPlace_Right","bh_Spine1"),("bh_NeckRope_R","bh_Neck1"),("bh_NeckRope_L","bh_Neck1"),("bh_Neck1_Roll","bh_Neck1"),("bh_Neck2_FixPos","bh_Neck2"),("bh_Neck_FixPos","bh_Neck"),("bh_Spine1_Roll","bh_Spine1"),("bh_ChestArmor","bh_Spine1"),("bh_Tail03","bh_Tail02"),("bh_LeftFinger","bh_LeftHand"),("bh_RightFinger","bh_RightHand"),("bh_LeftToe","bh_LeftFoot"),("bh_RightToe","bh_RightFoot"),("bh_RearIK_R","bh_Root"),("bh_RearIK_L","bh_Root"),("bh_FrontIK_R","bh_Root"),("bh_FrontIK_L","bh_Root"),("bh_LegIK_Root","bh_Root"),("bh_Jaw","bh_Head")),OptimizationSettings=(NumOfTrianglesPercentage=0.1,bTransferMorphTarget=True))
++Settings=(ScreenSize=0.05,RemovedBones=("bh_NeckHair_Top3","bh_NeckHair_Mid3","bh_NeckHair_Low3","bh_RightEye","bh_LeftEye","bh_Cloth_FL_A_3_sim","bh_Cloth_FL_B_3_sim","bh_Cloth_BL_A_3_sim","bh_Cloth_BL_B_3_sim","bh_Cloth_BL_C_3_sim","bh_Cloth_FR_A_3_sim","bh_Cloth_FR_B_3_sim","bh_Cloth_BR_A_3_sim","bh_Cloth_BR_B_3_sim","bh_Cloth_BR_C_3_sim","bh_TailEnd_sim","bh_RightEar","bh_LeftEar","bh_LipTop","bh_LipLow","bh_LeftFingerEnd","bh_RightFingerEnd","bh_LeftToeEnd","bh_RightToeEnd","bh_TailEnd","bh_LeftThigh_Roll","bh_RightThigh_Roll","bh_Cloth_FL_A_1","bh_Cloth_FL_B_1","bh_Cloth_BL_A_1","bh_Cloth_BL_B_1","bh_Cloth_BL_C_1","bh_Cloth_FR_A_1","bh_Cloth_FR_B_1","bh_Cloth_BR_A_1","bh_Cloth_BR_B_1","bh_Cloth_BR_C_1","bh_Cloth_FL_A_2","bh_Cloth_FL_B_2","bh_Cloth_BL_A_2","bh_Cloth_BL_B_2","bh_Cloth_BL_C_2","bh_Cloth_FR_A_2","bh_Cloth_FR_B_2","bh_Cloth_BR_A_2","bh_Cloth_BR_B_2","bh_Cloth_BR_C_2","bh_LeftStirrup","bh_LeftStirrupEnd","bh_RightStirrup","bh_RightStirrupEnd","bh_HandPlace_Left","bh_HandPlace_Right","bh_NeckRope_R","bh_NeckRope_L","bh_Neck1_Roll","bh_Neck2_FixPos","bh_Neck_FixPos","bh_Spine1_Roll","bh_ChestArmor","bh_Tail03","bh_LeftFinger","bh_RightFinger","bh_LeftToe","bh_RightToe","bh_RearIK_R","bh_RearIK_L","bh_FrontIK_R","bh_FrontIK_L","bh_LegIK_Root","bh_Jaw","bh_NeckHair_Top1","bh_NeckHair_Mid1","bh_NeckHair_Low1","bh_NeckHair_Top2","bh_NeckHair_Mid2","bh_NeckHair_Low2","bh_Neck2_Fix","bh_Neck2_Roll","bh_Neck_Fix","bh_Head","bh_Neck3","bh_Neck2","bh_Neck1"),RemovedBoneRemapping=(("bh_RightEye","bh_Head"),("bh_LeftEye","bh_Head"),("bh_NeckHair_Top3","bh_NeckHair_Top2"),("bh_NeckHair_Mid3","bh_NeckHair_Mid2"),("bh_NeckHair_Low3","bh_NeckHair_Low2"),("bh_Cloth_FL_A_3_sim","bh_Cloth_FL_A_2"),("bh_Cloth_FL_B_3_sim","bh_Cloth_FL_B_2"),("bh_Cloth_BL_A_3_sim","bh_Cloth_BL_A_2"),("bh_Cloth_BL_B_3_sim","bh_Cloth_BL_B_2"),("bh_Cloth_BL_C_3_sim","bh_Cloth_BL_C_2"),("bh_Cloth_FR_A_3_sim","bh_Cloth_FR_A_2"),("bh_Cloth_FR_B_3_sim","bh_Cloth_FR_B_2"),("bh_Cloth_BR_A_3_sim","bh_Cloth_BR_A_2"),("bh_Cloth_BR_B_3_sim","bh_Cloth_BR_B_2"),("bh_Cloth_BR_C_3_sim","bh_Cloth_BR_C_2"),("bh_TailEnd_sim","bh_TailEnd"),("bh_RightEar","bh_Head"),("bh_LeftEar","bh_Head"),("bh_LipTop","bh_Head"),("bh_LipLow","bh_Head"),("bh_LeftFingerEnd","bh_LeftFinger"),("bh_RightFingerEnd","bh_RightFinger"),("bh_LeftToeEnd","bh_LeftToe"),("bh_RightToeEnd","bh_RightToe"),("bh_TailEnd","bh_Tail03"),("bh_LeftThigh_Roll","bh_Hip"),("bh_RightThigh_Roll","bh_Hip"),("bh_Cloth_FL_A_1","bh_LeftUpArm"),("bh_Cloth_FL_B_1","bh_Spine1"),("bh_Cloth_BL_A_1","bh_Spine1"),("bh_Cloth_BL_B_1","bh_LeftThigh"),("bh_Cloth_BL_C_1","bh_LeftThigh"),("bh_Cloth_FR_A_1","bh_RightUpArm"),("bh_Cloth_FR_B_1","bh_Spine1"),("bh_Cloth_BR_A_1","bh_Spine1"),("bh_Cloth_BR_B_1","bh_RightThigh"),("bh_Cloth_BR_C_1","bh_RightThigh"),("bh_Cloth_FL_A_2","bh_LeftForearm"),("bh_Cloth_FL_B_2","bh_Spine1"),("bh_Cloth_BL_A_2","bh_Spine1"),("bh_Cloth_BL_B_2","bh_LeftLeg"),("bh_Cloth_BL_C_2","bh_LeftFoot"),("bh_Cloth_FR_A_2","bh_RightUpArm"),("bh_Cloth_FR_B_2","bh_Spine1"),("bh_Cloth_BR_A_2","bh_Spine1"),("bh_Cloth_BR_B_2","bh_RightLeg"),("bh_Cloth_BR_C_2","bh_RightFoot"),("bh_LeftStirrup","bh_Spine1"),("bh_LeftStirrupEnd","bh_Spine1"),("bh_RightStirrup","bh_Spine1"),("bh_RightStirrupEnd","bh_Spine1"),("bh_HandPlace_Left","bh_Spine1"),("bh_HandPlace_Right","bh_Spine1"),("bh_NeckRope_R","bh_Neck1"),("bh_NeckRope_L","bh_Neck1"),("bh_Neck1_Roll","bh_Neck1"),("bh_Neck2_FixPos","bh_Neck2"),("bh_Neck_FixPos","bh_Neck"),("bh_Spine1_Roll","bh_Spine1"),("bh_ChestArmor","bh_Spine1"),("bh_Tail03","bh_Tail02"),("bh_LeftFinger","bh_LeftHand"),("bh_RightFinger","bh_RightHand"),("bh_LeftToe","bh_LeftFoot"),("bh_RightToe","bh_RightFoot"),("bh_RearIK_R","bh_Root"),("bh_RearIK_L","bh_Root"),("bh_FrontIK_R","bh_Root"),("bh_FrontIK_L","bh_Root"),("bh_LegIK_Root","bh_Root"),("bh_Jaw","bh_Head"),("bh_NeckHair_Top1","bh_Neck"),("bh_NeckHair_Mid1","bh_Neck"),("bh_NeckHair_Low1","bh_Neck"),("bh_NeckHair_Top2","bh_Neck"),("bh_NeckHair_Mid2","bh_Neck"),("bh_NeckHair_Low2","bh_Neck"),("bh_Neck2_Fix","bh_Neck"),("bh_Neck2_Roll","bh_Neck"),("bh_Neck_Fix","bh_Neck"),("bh_Head","bh_Neck"),("bh_Neck3","bh_Neck"),("bh_Neck2","bh_Neck"),("bh_Neck1","bh_Neck")),OptimizationSettings=(NumOfTrianglesPercentage=0.01,bTransferMorphTarget=True))
++Settings=(ScreenSize=0.01,RemovedBones=("bh_NeckHair_Top3","bh_NeckHair_Mid3","bh_NeckHair_Low3","bh_RightEye","bh_LeftEye","bh_Cloth_FL_A_3_sim","bh_Cloth_FL_B_3_sim","bh_Cloth_BL_A_3_sim","bh_Cloth_BL_B_3_sim","bh_Cloth_BL_C_3_sim","bh_Cloth_FR_A_3_sim","bh_Cloth_FR_B_3_sim","bh_Cloth_BR_A_3_sim","bh_Cloth_BR_B_3_sim","bh_Cloth_BR_C_3_sim","bh_TailEnd_sim","bh_RightEar","bh_LeftEar","bh_LipTop","bh_LipLow","bh_LeftFingerEnd","bh_RightFingerEnd","bh_LeftToeEnd","bh_RightToeEnd","bh_TailEnd","bh_LeftThigh_Roll","bh_RightThigh_Roll","bh_Cloth_FL_A_1","bh_Cloth_FL_B_1","bh_Cloth_BL_A_1","bh_Cloth_BL_B_1","bh_Cloth_BL_C_1","bh_Cloth_FR_A_1","bh_Cloth_FR_B_1","bh_Cloth_BR_A_1","bh_Cloth_BR_B_1","bh_Cloth_BR_C_1","bh_Cloth_FL_A_2","bh_Cloth_FL_B_2","bh_Cloth_BL_A_2","bh_Cloth_BL_B_2","bh_Cloth_BL_C_2","bh_Cloth_FR_A_2","bh_Cloth_FR_B_2","bh_Cloth_BR_A_2","bh_Cloth_BR_B_2","bh_Cloth_BR_C_2","bh_LeftStirrup","bh_LeftStirrupEnd","bh_RightStirrup","bh_RightStirrupEnd","bh_HandPlace_Left","bh_HandPlace_Right","bh_NeckRope_R","bh_NeckRope_L","bh_Neck1_Roll","bh_Neck2_FixPos","bh_Neck_FixPos","bh_Spine1_Roll","bh_ChestArmor","bh_Tail03","bh_LeftFinger","bh_RightFinger","bh_LeftToe","bh_RightToe","bh_RearIK_R","bh_RearIK_L","bh_FrontIK_R","bh_FrontIK_L","bh_LegIK_Root","bh_Jaw","bh_NeckHair_Top1","bh_NeckHair_Mid1","bh_NeckHair_Low1","bh_NeckHair_Top2","bh_NeckHair_Mid2","bh_NeckHair_Low2","bh_Neck2_Fix","bh_Neck2_Roll","bh_Neck_Fix","bh_Head","bh_Neck3","bh_Neck2","bh_Neck1"),RemovedBoneRemapping=(("bh_RightEye","bh_Head"),("bh_LeftEye","bh_Head"),("bh_NeckHair_Top3","bh_NeckHair_Top2"),("bh_NeckHair_Mid3","bh_NeckHair_Mid2"),("bh_NeckHair_Low3","bh_NeckHair_Low2"),("bh_Cloth_FL_A_3_sim","bh_Cloth_FL_A_2"),("bh_Cloth_FL_B_3_sim","bh_Cloth_FL_B_2"),("bh_Cloth_BL_A_3_sim","bh_Cloth_BL_A_2"),("bh_Cloth_BL_B_3_sim","bh_Cloth_BL_B_2"),("bh_Cloth_BL_C_3_sim","bh_Cloth_BL_C_2"),("bh_Cloth_FR_A_3_sim","bh_Cloth_FR_A_2"),("bh_Cloth_FR_B_3_sim","bh_Cloth_FR_B_2"),("bh_Cloth_BR_A_3_sim","bh_Cloth_BR_A_2"),("bh_Cloth_BR_B_3_sim","bh_Cloth_BR_B_2"),("bh_Cloth_BR_C_3_sim","bh_Cloth_BR_C_2"),("bh_TailEnd_sim","bh_TailEnd"),("bh_RightEar","bh_Head"),("bh_LeftEar","bh_Head"),("bh_LipTop","bh_Head"),("bh_LipLow","bh_Head"),("bh_LeftFingerEnd","bh_LeftFinger"),("bh_RightFingerEnd","bh_RightFinger"),("bh_LeftToeEnd","bh_LeftToe"),("bh_RightToeEnd","bh_RightToe"),("bh_TailEnd","bh_Tail03"),("bh_LeftThigh_Roll","bh_Hip"),("bh_RightThigh_Roll","bh_Hip"),("bh_Cloth_FL_A_1","bh_LeftUpArm"),("bh_Cloth_FL_B_1","bh_Spine1"),("bh_Cloth_BL_A_1","bh_Spine1"),("bh_Cloth_BL_B_1","bh_LeftThigh"),("bh_Cloth_BL_C_1","bh_LeftThigh"),("bh_Cloth_FR_A_1","bh_RightUpArm"),("bh_Cloth_FR_B_1","bh_Spine1"),("bh_Cloth_BR_A_1","bh_Spine1"),("bh_Cloth_BR_B_1","bh_RightThigh"),("bh_Cloth_BR_C_1","bh_RightThigh"),("bh_Cloth_FL_A_2","bh_LeftForearm"),("bh_Cloth_FL_B_2","bh_Spine1"),("bh_Cloth_BL_A_2","bh_Spine1"),("bh_Cloth_BL_B_2","bh_LeftLeg"),("bh_Cloth_BL_C_2","bh_LeftFoot"),("bh_Cloth_FR_A_2","bh_RightUpArm"),("bh_Cloth_FR_B_2","bh_Spine1"),("bh_Cloth_BR_A_2","bh_Spine1"),("bh_Cloth_BR_B_2","bh_RightLeg"),("bh_Cloth_BR_C_2","bh_RightFoot"),("bh_LeftStirrup","bh_Spine1"),("bh_LeftStirrupEnd","bh_Spine1"),("bh_RightStirrup","bh_Spine1"),("bh_RightStirrupEnd","bh_Spine1"),("bh_HandPlace_Left","bh_Spine1"),("bh_HandPlace_Right","bh_Spine1"),("bh_NeckRope_R","bh_Neck1"),("bh_NeckRope_L","bh_Neck1"),("bh_Neck1_Roll","bh_Neck1"),("bh_Neck2_FixPos","bh_Neck2"),("bh_Neck_FixPos","bh_Neck"),("bh_Spine1_Roll","bh_Spine1"),("bh_ChestArmor","bh_Spine1"),("bh_Tail03","bh_Tail02"),("bh_LeftFinger","bh_LeftHand"),("bh_RightFinger","bh_RightHand"),("bh_LeftToe","bh_LeftFoot"),("bh_RightToe","bh_RightFoot"),("bh_RearIK_R","bh_Root"),("bh_RearIK_L","bh_Root"),("bh_FrontIK_R","bh_Root"),("bh_FrontIK_L","bh_Root"),("bh_LegIK_Root","bh_Root"),("bh_Jaw","bh_Head"),("bh_NeckHair_Top1","bh_Neck"),("bh_NeckHair_Mid1","bh_Neck"),("bh_NeckHair_Low1","bh_Neck"),("bh_NeckHair_Top2","bh_Neck"),("bh_NeckHair_Mid2","bh_Neck"),("bh_NeckHair_Low2","bh_Neck"),("bh_Neck2_Fix","bh_Neck"),("bh_Neck2_Roll","bh_Neck"),("bh_Neck_Fix","bh_Neck"),("bh_Head","bh_Neck"),("bh_Neck3","bh_Neck"),("bh_Neck2","bh_Neck"),("bh_Neck1","bh_Neck")),OptimizationSettings=(NumOfTrianglesPercentage=0.01,bTransferMorphTarget=True))
+
+[/Script/GameplayDebugger.GameplayDebuggerConfig]
+ActivationKey=Apostrophe
+CategoryRowNextKey=Add
+CategoryRowPrevKey=Subtract
+CategorySlot0=NumPadZero
+CategorySlot1=NumPadOne
+CategorySlot2=NumPadTwo
+CategorySlot3=NumPadThree
+CategorySlot4=NumPadFour
+CategorySlot5=NumPadFive
+CategorySlot6=NumPadSix
+CategorySlot7=NumPadSeven
+CategorySlot8=NumPadEight
+CategorySlot9=NumPadNine
+DebugCanvasPaddingLeft=10.000000
+DebugCanvasPaddingRight=10.000000
+DebugCanvasPaddingTop=10.000000
+DebugCanvasPaddingBottom=10.000000
++Categories=(CategoryName="AI",SlotIdx=1,ActiveInGame=UseDefault,ActiveInSimulate=UseDefault,Hidden=UseDefault,bOverrideSlotIdx=False,InputHandlers=)
++Categories=(CategoryName="BehaviorTree",SlotIdx=2,ActiveInGame=UseDefault,ActiveInSimulate=UseDefault,Hidden=UseDefault,bOverrideSlotIdx=False,InputHandlers=)
++Categories=(CategoryName="EQS",SlotIdx=-1,ActiveInGame=UseDefault,ActiveInSimulate=UseDefault,Hidden=UseDefault,bOverrideSlotIdx=False,InputHandlers=((ConfigName="CycleQueries",Key=Multiply),(ConfigName="ToggleDetails",Key=Divide)))
++Categories=(CategoryName="Navmesh",SlotIdx=0,ActiveInGame=UseDefault,ActiveInSimulate=UseDefault,Hidden=UseDefault,bOverrideSlotIdx=False,InputHandlers=)
++Categories=(CategoryName="Perception",SlotIdx=-1,ActiveInGame=UseDefault,ActiveInSimulate=UseDefault,Hidden=UseDefault,bOverrideSlotIdx=False,InputHandlers=)
++Categories=(CategoryName="NavGrid",SlotIdx=-1,ActiveInGame=UseDefault,ActiveInSimulate=UseDefault,Hidden=UseDefault,bOverrideSlotIdx=False,InputHandlers=)
++Extensions=(ExtensionName="GameHUD",UseExtension=UseDefault,InputHandlers=((ConfigName="ToggleHUD",Key=Divide),(ConfigName="ToggleMessages",Key=Multiply)))
++Extensions=(ExtensionName="Spectator",UseExtension=UseDefault,InputHandlers=((ConfigName="Toggle",Key=Decimal)))
+
+[/Script/NavigationSystem.RecastNavMesh]
+AgentRadius=46.000000
+AgentHeight=200.000000
+AgentMaxHeight=200.000000
+RuntimeGeneration=Dynamic
+CellHeight=10.000000
+AgentMaxSlope=41.000000
+CellSize=8.000000
+AgentMaxStepHeight=40.000000
+bForceRebuildOnLoad=False
+bDrawPolyEdges=True
+bDoFullyAsyncNavDataGathering=True
+MinRegionArea=500.000000
+bFixedTilePoolSize=True
+TilePoolSize=13500
+
+[TBL.TestBuild.Commands]
+Cmd=log UGameSparksModuleLog none
+
+[/Script/SignificanceManager.SignificanceManager]
+SignificanceManagerClassName=/Script/TBL.TBLSignificanceManager
+
+[DerivedDataBackendGraph]
+MinimumDaysToKeepFile=7
+Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
+AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
+Hierarchy=(Type=Hierarchical, Inner=Boot, Inner=Pak, Inner=EnginePak, Inner=Local, Inner=Shared)
+Boot=(Type=Boot, Filename="%GAMEDIR%DerivedDataCache/Boot.ddc", MaxCacheSize=512)
+Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=34, FoldersToClean=-1, Path=../../../Engine/DerivedDataCache, EnvPathOverride=UE-LocalDataCachePath)
+Pak=(Type=ReadPak, Filename="%GAMEDIR%DerivedDataCache/DDC.ddp", Compressed=true)
+EnginePak=(Type=ReadPak, Filename=../../../Engine/DerivedDataCache/DDC.ddp)
+
+[/Script/RenderDocPlugin.RenderDocPluginSettings]
+renderdoc.CaptureAllActivity=False
+renderdoc.CaptureCallstacks=True
+renderdoc.ReferenceAllResources=False
+renderdoc.SaveAllInitials=False
+renderdoc.ShowHelpOnStartup=False
+renderdoc.EnableCrashHandler=False
+renderdoc.BinaryPath=C:\Program Files\RenderDoc
+
+[Audio]
+UseAudioMixer=false
+UseAudioThread=false
+
+[/Script/AkAudio.AkAcousticPortal]
+MaxRelevantAcousticPortals=5
+
+[/Script/AkAudio.AkSurfaceReflectorSetComponent]
+MaxRelevantReflectorSets=12
+
+[/Script/WindowsTargetPlatform.WindowsTargetSettings]
+Compiler=Default
+-TargetedRHIs=PCD3D_SM5
+-TargetedRHIs=PCD3D_SM4
++TargetedRHIs=PCD3D_SM5
+MinimumOSVersion=MSOS_Vista
+AudioDevice=
+AudioSampleRate=48000
+AudioCallbackBufferFrameSize=1024
+AudioNumBuffersToEnqueue=1
+AudioMaxChannels=0
+AudioNumSourceWorkers=4
+SpatializationPlugin=
+ReverbPlugin=
+OcclusionPlugin=
+
+[/Script/Engine.NavMovementComponent]
+bUseAccelerationForPaths=true
+
+[RuntimeAssetCache]
+-BucketConfigs=(Name="DefaultBucket", Size=10000000)
++BucketConfigs=(Name="CharacterBucket", Size=1073741824)
+
+[/Script/Engine.AnimationSettings]
+CompressCommandletVersion=3
+
+[Animation.DefaultObjectSettings]
+BoneCompressionSettings=/Game/Animation/TBLAnimBoneCompressionSettings
+
+[AnimationCompression]
+ForceRecompression=False
+
+[/Script/PythonScriptPlugin.PythonScriptPluginSettings]
++AdditionalPaths=(Path="../../../TBL/Content/Python")
+bDeveloperMode=False
+
+[Engine.StartupPackages]
+-Package=/Engine/EngineMaterials/DefaultBloomKernel
++Package=/Game/Characters/BaseCharacter
+
+[/Script/UnrealEd.CookerSettings]
+bEnableCookOnTheSide=False
+bEnableBuildDDCInBackground=False
+bIterativeCookingForLaunchOn=False
+bIterativeCookingForFileCookContent=False
+bCookOnTheFlyForLaunchOn=True
+cook.displaymode=1
+bIgnoreIniSettingsOutOfDateForIteration=False
+bIgnoreScriptPackagesOutOfDateForIteration=False
+bCompileBlueprintsInDevelopmentMode=True
+BlueprintComponentDataCookingMethod=EnabledBlueprintsOnly
++ClassesExcludedOnDedicatedServer=WidgetBlueprint
++ClassesExcludedOnDedicatedServer=GroupActor
++ClassesExcludedOnDedicatedServer=MetaData
++ClassesExcludedOnDedicatedServer=ObjectRedirector
++ClassesExcludedOnDedicatedServer=NavMeshRenderingComponent
++ClassesExcludedOnDedicatedServer=ReflectionCaptureComponent
++ClassesExcludedOnDedicatedServer=TextRenderComponent
++ClassesExcludedOnDedicatedServer=Font
++ClassesExcludedOnDedicatedServer=InterpCurveEdSetup
++ClassesExcludedOnDedicatedServer=MaterialExpression
++ClassesExcludedOnDedicatedServer=MatineeActorCameraAnim
++ClassesExcludedOnDedicatedServer=ParticleEmitter
++ClassesExcludedOnDedicatedServer=ParticleLODLevel
++ClassesExcludedOnDedicatedServer=ParticleModule
++ClassesExcludedOnDedicatedServer=SubUVAnimation
++ClassesExcludedOnDedicatedServer=SoundNode
++ClassesExcludedOnDedicatedServer=GameplayEffectUIData
++ClassesExcludedOnDedicatedServer=FontFace
++ClassesExcludedOnDedicatedClient=WidgetBlueprint
++ClassesExcludedOnDedicatedClient=GroupActor
++ClassesExcludedOnDedicatedClient=MetaData
++ClassesExcludedOnDedicatedClient=ObjectRedirector
++ClassesExcludedOnDedicatedClient=InterpCurveEdSetup
++ClassesExcludedOnDedicatedClient=MatineeActorCameraAnim
++VersionedIntRValues=r.AllowStaticLighting
++VersionedIntRValues=r.GBuffer
++VersionedIntRValues=r.BasePassOutputsVelocity
++VersionedIntRValues=r.SelectiveBasePassOutputs
++VersionedIntRValues=r.DBuffer
++VersionedIntRValues=r.Shaders.KeepDebugInfo
++VersionedIntRValues=r.Shaders.Optimize
++VersionedIntRValues=r.CompileShadersForDevelopment
++VersionedIntRValues=r.MobileHDR
++VersionedIntRValues=r.UsePreExposure
+DefaultPVRTCQuality=1
+DefaultASTCQualityBySpeed=1
+DefaultASTCQualityBySize=3
+cook.AllowCookedDataInEditorBuilds=False
+bCookBlueprintComponentTemplateData=False
+
+[DevOptions.Shaders]
+bPromptToRetryFailedShaderCompiles=False
+
+[Core.System]
+ZeroEngineVersionWarning=False
+
+[Core.Log]
+LogAkAudio=none
+LogReplicationGraph=Error
+LogOnlineSession=All
+LogPushableSiege=All
+
+[/Script/LinuxTargetPlatform.LinuxTargetSettings]
+!TargetedRHIs=ClearArray
+
+[/Script/HoudiniEngineRuntime.HoudiniRuntimeSettings]
+SessionType=HRSST_Socket
+bSaveTextures=True
+bStartAutomaticServer=False
+bExportEnvMasterParameters=True
+TBSHoudiniDigitalAsset=/Game/Developers/KartikSaranathan/Houdini/Kartik_Saranathan_mapbaker.Kartik_Saranathan_mapbaker
+ServerPort=9091
+DstLightmapIndex=0
+
+[Cmd1]
++Cmd=Mem FromReport
++Cmd=LogCountedInstances
++Cmd=obj list -alphasort
++Cmd=rhi.DumpMemory
++Cmd=LogOutStatLevels
++Cmd=ListSpawnedActors
+
+[MemReportFullCommands]
++Cmd=obj list class=AnimSequence -alphasort
++Cmd=obj list class=AnimMontage -alphasort
+
+[/Script/GameServerQueryPlugin.GameServerQuery]
+QueryIpAddress=0.0.0.0
+QueryPort=7071
+QueryThreadWaitTimeMilliseconds=100
+
+[/Script/Engine.UserInterfaceSettings]
+bAllowHighDPIInGameMode=True
+bLoadWidgetsOnDedicatedServer=False
+RenderFocusRule=Never
+
+[/Script/Engine.GarbageCollectionSettings]
+gc.ActorClusteringEnabled=True
+gc.BlueprintClusteringEnabled=False
+gc.UseDisregardForGCOnDedicatedServers=True
+
+[/Script/TBL.TBLReplicationGraphSettings]
+SpatialNodeSettings=((LowFreq, (CellSize=7000.000000,DynamicSpatialFrequencyZones=((MinDotProduct=0.000000,MinDistPct=0.050000,MaxDistPct=0.100000,MaxDistHz=0.200000,FastPath_MinDistHz=0.000000,FastPath_MaxDistHz=0.000000),(MinDotProduct=0.710000,MinDistPct=0.050000,MaxDistPct=0.100000,MinDistHz=10.000000,MaxDistHz=1.000000,FastPath_MinDistHz=0.000000,FastPath_MaxDistHz=0.000000),(MinDistPct=0.100000,MaxDistPct=0.500000,MinDistHz=20.000000,MaxDistHz=2.000000,FastPath_MinDistHz=20.000000,FastPath_MaxDistHz=10.000000)))),(HighFreq, (CellSize=7000.000000,bEnableDynamicSpatialFrequency=True,DynamicSpatialFrequencyZones=((MinDotProduct=0.000000,MinDistPct=0.050000,MaxDistPct=0.100000,MinDistHz=10.000000,MaxDistHz=1.000000,FastPath_MinDistHz=30.000000,FastPath_MaxDistHz=1.000000),(MinDotProduct=0.500000,MinDistPct=0.050000,MaxDistPct=0.500000,MinDistHz=30.000000,MaxDistHz=1.000000,FastPath_MinDistHz=60.000000,FastPath_MaxDistHz=6.000000),(MinDistPct=0.100000,MinDistHz=60.000000,MaxDistHz=2.500000,FastPath_MinDistHz=60.000000,FastPath_MaxDistHz=300.000000)))),(LowFreqWithFastPath, (CellSize=7000.000000,DynamicSpatialFrequencyZones=((MinDotProduct=0.000000,MinDistPct=0.050000,MaxDistPct=0.100000,MinDistHz=0.800000,MaxDistHz=0.200000,FastPath_MinDistHz=5.000000,FastPath_MaxDistHz=0.300000),(MinDotProduct=0.710000,MinDistPct=0.050000,MaxDistPct=0.100000,MinDistHz=1.200000,MaxDistHz=0.200000,FastPath_MinDistHz=10.000000),(MinDistPct=0.100000,MaxDistPct=0.500000,MinDistHz=3.000000,MaxDistHz=0.500000,FastPath_MinDistHz=20.000000,FastPath_MaxDistHz=10.000000)))),(HighFreqWithFastPath, (CellSize=7000.000000,bEnableDynamicSpatialFrequency=True,DynamicSpatialFrequencyZones=((MinDotProduct=0.000000,MinDistPct=0.100000,MaxDistPct=0.100000,MinDistHz=1.200000,MaxDistHz=0.200000,FastPath_MinDistHz=60.000000,FastPath_MaxDistHz=1.000000),(MinDotProduct=0.500000,MinDistPct=0.100000,MaxDistPct=0.100000,MinDistHz=4.000000,MaxDistHz=0.200000,FastPath_MinDistHz=60.000000),(MinDistPct=0.100000,MinDistHz=6.000000,MaxDistHz=0.500000,FastPath_MinDistHz=60.000000,FastPath_MaxDistHz=30.000000)))),(MediumFreq, (CellSize=7000.000000,bEnableDynamicSpatialFrequency=True,DynamicSpatialFrequencyZones=((MinDotProduct=0.000000,MinDistPct=0.050000,MaxDistPct=0.100000,MinDistHz=8.000000,MaxDistHz=1.000000,FastPath_MinDistHz=20.000000,FastPath_MaxDistHz=0.000000),(MinDotProduct=0.710000,MinDistPct=0.050000,MaxDistPct=0.100000,MinDistHz=20.000000,MaxDistHz=5.000000,FastPath_MinDistHz=20.000000,FastPath_MaxDistHz=0.000000),(MinDistPct=0.100000,MaxDistPct=0.500000,MinDistHz=20.000000,MaxDistHz=5.000000,FastPath_MinDistHz=30.000000,FastPath_MaxDistHz=10.000000)))),(MediumFreqNoDynamic, (CellSize=7000.000000,DynamicSpatialFrequencyZones=((MinDotProduct=0.000000,MinDistPct=0.050000,MaxDistPct=0.100000,MinDistHz=8.000000,MaxDistHz=1.000000,FastPath_MinDistHz=20.000000,FastPath_MaxDistHz=0.000000),(MinDotProduct=0.710000,MinDistPct=0.050000,MaxDistPct=0.100000,MinDistHz=20.000000,MaxDistHz=5.000000,FastPath_MinDistHz=20.000000,FastPath_MaxDistHz=0.000000),(MinDistPct=0.100000,MaxDistPct=0.500000,MinDistHz=20.000000,MaxDistHz=5.000000,FastPath_MinDistHz=30.000000,FastPath_MaxDistHz=10.000000)))))
+ClassReplicationGraphSettings=((/Script/TBL.TBLCharacter, (StarvationPriorityScale=1.500000,NodeMapping=HighFreq_Spatialize_Dynamic,ActorChannelFrameTimeout=255)),(/Game/Interactables/Carryables/BaseCarryable_Offhand/Gore/Carryable_GoreHead.Carryable_GoreHead_C, (DistancePriorityScale=0.500000,NetCullDistance=5000.000000,NodeMapping=LowFreq_Spatialize_Dynamic)),(/Game/GameModes/Actors/Destroyables/BPA_Burnable.BPA_Burnable_C, (NetCullDistance=10000.000000,NodeMapping=LowFreq_Spatialize_Static)),(/Script/TBL.Horse, (StarvationPriorityScale=1.500000,NodeMapping=HighFreq_Spatialize_Dynamic,ActorChannelFrameTimeout=255)),(/Game/Characters/Animals/Pig02/Actor/NPC_Pig_Carryable.NPC_Pig_Carryable_C, (NodeMapping=HighFreq_Spatialize_Dormancy,ActorChannelFrameTimeout=255)))
+
+[/Script/Engine.CollisionProfile]
+-Profiles=(Name="NoCollision",CollisionEnabled=NoCollision,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore)),HelpMessage="No collision",bCanModify=False)
+-Profiles=(Name="BlockAll",CollisionEnabled=QueryAndPhysics,ObjectTypeName="WorldStatic",CustomResponses=,HelpMessage="WorldStatic object that blocks all actors by default. All new custom channels will use its own default response. ",bCanModify=False)
+-Profiles=(Name="OverlapAll",CollisionEnabled=QueryOnly,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldStatic object that overlaps all actors by default. All new custom channels will use its own default response. ",bCanModify=False)
+-Profiles=(Name="BlockAllDynamic",CollisionEnabled=QueryAndPhysics,ObjectTypeName="WorldDynamic",CustomResponses=,HelpMessage="WorldDynamic object that blocks all actors by default. All new custom channels will use its own default response. ",bCanModify=False)
+-Profiles=(Name="OverlapAllDynamic",CollisionEnabled=QueryOnly,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldDynamic object that overlaps all actors by default. All new custom channels will use its own default response. ",bCanModify=False)
+-Profiles=(Name="IgnoreOnlyPawn",CollisionEnabled=QueryOnly,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that ignores Pawn and Vehicle. All other channels will be set to default.",bCanModify=False)
+-Profiles=(Name="OverlapOnlyPawn",CollisionEnabled=QueryOnly,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Pawn",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that overlaps Pawn, Camera, and Vehicle. All other channels will be set to default. ",bCanModify=False)
+-Profiles=(Name="Pawn",CollisionEnabled=QueryAndPhysics,ObjectTypeName="Pawn",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Pawn object. Can be used for capsule of any playerable character or AI. ",bCanModify=False)
+-Profiles=(Name="Spectator",CollisionEnabled=QueryOnly,ObjectTypeName="Pawn",CustomResponses=((Channel="WorldStatic",Response=ECR_Block),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore)),HelpMessage="Pawn object that ignores all other actors except WorldStatic.",bCanModify=False)
+-Profiles=(Name="CharacterMesh",CollisionEnabled=QueryOnly,ObjectTypeName="Pawn",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Pawn object that is used for Character Mesh. All other channels will be set to default.",bCanModify=False)
+-Profiles=(Name="PhysicsActor",CollisionEnabled=QueryAndPhysics,ObjectTypeName="PhysicsBody",CustomResponses=,HelpMessage="Simulating actors",bCanModify=False)
+-Profiles=(Name="Destructible",CollisionEnabled=QueryAndPhysics,ObjectTypeName="Destructible",CustomResponses=,HelpMessage="Destructible actors",bCanModify=False)
+-Profiles=(Name="InvisibleWall",CollisionEnabled=QueryAndPhysics,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="WorldStatic object that is invisible.",bCanModify=False)
+-Profiles=(Name="InvisibleWallDynamic",CollisionEnabled=QueryAndPhysics,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that is invisible.",bCanModify=False)
+-Profiles=(Name="Trigger",CollisionEnabled=QueryOnly,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldDynamic object that is used for trigger. All other channels will be set to default.",bCanModify=False)
+-Profiles=(Name="Ragdoll",CollisionEnabled=QueryAndPhysics,ObjectTypeName="PhysicsBody",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Simulating Skeletal Mesh Component. All other channels will be set to default.",bCanModify=False)
+-Profiles=(Name="Vehicle",CollisionEnabled=QueryAndPhysics,ObjectTypeName="Vehicle",CustomResponses=,HelpMessage="Vehicle object that blocks Vehicle, WorldStatic, and WorldDynamic. All other channels will be set to default.",bCanModify=False)
+-Profiles=(Name="UI",CollisionEnabled=QueryOnly,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Block),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldStatic object that overlaps all actors by default. All new custom channels will use its own default response. ",bCanModify=False)
++Profiles=(Name="NoCollision",CollisionEnabled=NoCollision,bCanModify=False,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Ignore)),HelpMessage="No collision")
++Profiles=(Name="BlockAll",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Weapon"),(Channel="Ragdoll"),(Channel="Aura"),(Channel="TBLSpecator")),HelpMessage="WorldStatic object that blocks all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="OverlapAll",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap),(Channel="Projectile",Response=ECR_Overlap),(Channel="HorseIdle",Response=ECR_Overlap)),HelpMessage="WorldStatic object that overlaps all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="BlockAllDynamic",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Weapon"),(Channel="Aura")),HelpMessage="WorldDynamic object that blocks all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="OverlapAllDynamic",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap),(Channel="Projectile",Response=ECR_Overlap),(Channel="HorseIdle",Response=ECR_Overlap)),HelpMessage="WorldDynamic object that overlaps all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="IgnoreOnlyPawn",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that ignores Pawn and Vehicle. All other channels will be set to default.")
++Profiles=(Name="OverlapOnlyPawn",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Pawn",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Overlap)),HelpMessage="WorldDynamic object that overlaps Pawn, Camera, and Vehicle. All other channels will be set to default. ")
++Profiles=(Name="Pawn",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="Pawn",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Aura"),(Channel="HorseMoving",Response=ECR_Ignore)),HelpMessage="Pawn object. Can be used for capsule of any playerable character or AI. ")
++Profiles=(Name="Spectator",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="Pawn",CustomResponses=((Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Aura",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Ignore)),HelpMessage="Pawn object that ignores all other actors except WorldStatic.")
++Profiles=(Name="CharacterMesh",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="Pawn",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Weapon"),(Channel="HorseIdle",Response=ECR_Ignore)),HelpMessage="Pawn object that is used for Character Mesh. All other channels will be set to default.")
++Profiles=(Name="PhysicsActor",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="PhysicsBody",CustomResponses=,HelpMessage="Simulating actors")
++Profiles=(Name="Destructible",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="Destructible",CustomResponses=((Channel="Weapon")),HelpMessage="Destructible actors")
++Profiles=(Name="InvisibleWall",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="WorldStatic object that is invisible.")
++Profiles=(Name="InvisibleWallDynamic",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that is invisible.")
++Profiles=(Name="Trigger",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap),(Channel="Projectile",Response=ECR_Overlap),(Channel="HorseIdle",Response=ECR_Overlap)),HelpMessage="WorldDynamic object that is used for trigger. All other channels will be set to default.")
++Profiles=(Name="Ragdoll",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="Ragdoll",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Weapon"),(Channel="Ragdoll"),(Channel="HorseIdle",Response=ECR_Ignore)),HelpMessage="Simulating Skeletal Mesh Component. All other channels will be set to default.")
++Profiles=(Name="Vehicle",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="Vehicle",CustomResponses=,HelpMessage="Vehicle object that blocks Vehicle, WorldStatic, and WorldDynamic. All other channels will be set to default.")
++Profiles=(Name="UI",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldStatic object that overlaps all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="InventoryItem",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="InventoryItem",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="Weapon",Response=ECR_Overlap),(Channel="Projectile",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Ignore),(Channel="HorseMoving",Response=ECR_Ignore),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="Needs description")
++Profiles=(Name="ParryBox",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="Pawn",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Overlap),(Channel="Aura",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Ignore),(Channel="HorseMoving",Response=ECR_Ignore),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="Tracer parry box")
++Profiles=(Name="Projectile",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="Projectile",CustomResponses=((Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Projectile",Response=ECR_Ignore),(Channel="Ragdoll"),(Channel="HorseIdle",Response=ECR_Overlap)),HelpMessage="WorldStatic object that overlaps all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="ProjectileSecondary",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="Projectile",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Overlap),(Channel="Ragdoll",Response=ECR_Overlap),(Channel="HorseIdle",Response=ECR_Overlap),(Channel="HorseMoving",Response=ECR_Overlap),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="Needs description")
++Profiles=(Name="Aura",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="Aura",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap),(Channel="Projectile",Response=ECR_Ignore),(Channel="Ragdoll",Response=ECR_Overlap),(Channel="Aura",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Overlap),(Channel="HorseMoving",Response=ECR_Overlap),(Channel="InventoryItem",Response=ECR_Overlap)),HelpMessage="Used for Auras")
++Profiles=(Name="Shield",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Aura",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Ignore),(Channel="HorseMoving",Response=ECR_Ignore),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="Shields attached to characters")
++Profiles=(Name="SpawnWall",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Aura",Response=ECR_Ignore),(Channel="TBLSpecator"),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="Blocks only Pawns")
++Profiles=(Name="TBLSpectatorPawn",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="TBLSpecator",CustomResponses=((Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Aura",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Ignore),(Channel="HorseMoving",Response=ECR_Ignore),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="")
++Profiles=(Name="HorseIdle",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="HorseIdle",CustomResponses=((Channel="Projectile",Response=ECR_Ignore),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="Horse collision while idle")
++Profiles=(Name="HorseMoving",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="HorseMoving",CustomResponses=((Channel="Pawn",Response=ECR_Overlap),(Channel="Projectile",Response=ECR_Ignore),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="Horse collision while moving")
++Profiles=(Name="AKSpatialAudioVolume",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap),(Channel="Projectile",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Overlap),(Channel="HorseMoving",Response=ECR_Overlap),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="AKSpatialAudioVolume")
++Profiles=(Name="VIPCharacter",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="Pawn",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Aura"),(Channel="HorseMoving",Response=ECR_Overlap),(Channel="VIPBlockingVolume"),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="VIP Character pawn object.")
++Profiles=(Name="VIPBlockingVolume",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="VIPBlockingVolume",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Aura",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Ignore),(Channel="HorseMoving",Response=ECR_Ignore),(Channel="VIPBlockingVolume"),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="Only blocks VIP Characters.")
++Profiles=(Name="IgnoreCamera",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Camera",Response=ECR_Ignore),(Channel="Weapon"),(Channel="Ragdoll"),(Channel="Aura"),(Channel="TBLSpecator"),(Channel="VIPBlockingVolume")),HelpMessage="Needs description")
++Profiles=(Name="CaptureVolume",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Aura",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Overlap),(Channel="HorseMoving",Response=ECR_Overlap),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="Capture and pushable volumes. Only overlap with pawns")
++Profiles=(Name="PushableTrigger",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="Vehicle",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Aura",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Ignore),(Channel="HorseMoving",Response=ECR_Ignore),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="Trigger box to track pushable progress")
++Profiles=(Name="PushableSkeletalMesh",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="Vehicle",CustomResponses=((Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Weapon"),(Channel="Aura",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Ignore),(Channel="HorseMoving",Response=ECR_Ignore),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="Used on the pushables")
++Profiles=(Name="PushableBlockingVolume",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Aura",Response=ECR_Ignore)),HelpMessage="Needs description")
++Profiles=(Name="BlockHorse",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Aura",Response=ECR_Ignore),(Channel="InventoryItem",Response=ECR_Ignore)),HelpMessage="Used to block horses")
++Profiles=(Name="BlockAllButHorse",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Weapon"),(Channel="Ragdoll"),(Channel="Aura"),(Channel="HorseIdle",Response=ECR_Ignore),(Channel="TBLSpecator"),(Channel="HorseMoving",Response=ECR_Ignore),(Channel="VIPBlockingVolume"),(Channel="AkNoCollision")),HelpMessage="Blocks all objects types EXCEPT horse")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel1,DefaultResponse=ECR_Ignore,bTraceType=True,bStaticObject=False,Name="Weapon")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel2,DefaultResponse=ECR_Block,bTraceType=False,bStaticObject=False,Name="Projectile")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel3,DefaultResponse=ECR_Ignore,bTraceType=False,bStaticObject=False,Name="Ragdoll")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel4,DefaultResponse=ECR_Overlap,bTraceType=False,bStaticObject=False,Name="Aura")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel5,DefaultResponse=ECR_Block,bTraceType=False,bStaticObject=False,Name="HorseIdle")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel6,DefaultResponse=ECR_Ignore,bTraceType=False,bStaticObject=False,Name="TBLSpecator")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel7,DefaultResponse=ECR_Block,bTraceType=False,bStaticObject=False,Name="HorseMoving")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel8,DefaultResponse=ECR_Ignore,bTraceType=False,bStaticObject=False,Name="VIPBlockingVolume")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel9,DefaultResponse=ECR_Block,bTraceType=False,bStaticObject=False,Name="InventoryItem")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel10,DefaultResponse=ECR_Ignore,bTraceType=False,bStaticObject=False,Name="AkNoCollision")
++EditProfiles=(Name="Pawn",CustomResponses=((Channel="Weapon",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Aura"),(Channel="HorseIdle"),(Channel="HorseMoving",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Ignore),(Channel="InventoryItem",Response=ECR_Ignore)))
++EditProfiles=(Name="CharacterMesh",CustomResponses=((Channel="Weapon"),(Channel="HorseIdle",Response=ECR_Ignore),(Channel="HorseMoving",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore)))
++EditProfiles=(Name="NoCollision",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="EngineTraceChannel2",Response=ECR_Ignore),(Channel="EngineTraceChannel3",Response=ECR_Ignore),(Channel="EngineTraceChannel4",Response=ECR_Ignore),(Channel="EngineTraceChannel5",Response=ECR_Ignore),(Channel="EngineTraceChannel6",Response=ECR_Ignore),(Channel="GameTraceChannel2",Response=ECR_Ignore),(Channel="GameTraceChannel3",Response=ECR_Ignore),(Channel="GameTraceChannel4",Response=ECR_Ignore),(Channel="GameTraceChannel5",Response=ECR_Ignore),(Channel="GameTraceChannel6",Response=ECR_Ignore),(Channel="GameTraceChannel7",Response=ECR_Ignore),(Channel="GameTraceChannel8",Response=ECR_Ignore),(Channel="GameTraceChannel9",Response=ECR_Ignore),(Channel="GameTraceChannel10",Response=ECR_Ignore),(Channel="GameTraceChannel11",Response=ECR_Ignore),(Channel="GameTraceChannel12",Response=ECR_Ignore),(Channel="GameTraceChannel13",Response=ECR_Ignore),(Channel="GameTraceChannel14",Response=ECR_Ignore),(Channel="GameTraceChannel15",Response=ECR_Ignore),(Channel="GameTraceChannel16",Response=ECR_Ignore),(Channel="GameTraceChannel17",Response=ECR_Ignore),(Channel="GameTraceChannel18",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="HorseIdle",Response=ECR_Ignore),(Channel="HorseMoving",Response=ECR_Ignore)))
++EditProfiles=(Name="Ragdoll",CustomResponses=((Channel="Ragdoll",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Weapon"),(Channel="HorseIdle",Response=ECR_Ignore),(Channel="HorseMoving",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore)))
++EditProfiles=(Name="BlockAllDynamic",CustomResponses=((Channel="Weapon"),(Channel="Aura"),(Channel="Ragdoll")))
++EditProfiles=(Name="BlockAll",CustomResponses=((Channel="Weapon"),(Channel="Ragdoll"),(Channel="Aura"),(Channel="TBLSpecator")))
++EditProfiles=(Name="Destructible",CustomResponses=((Channel="Weapon")))
++EditProfiles=(Name="OverlapAll",CustomResponses=((Channel="Projectile",Response=ECR_Overlap),(Channel="HorseIdle",Response=ECR_Overlap),(Channel="HorseMoving",Response=ECR_Overlap)))
++EditProfiles=(Name="OverlapAllDynamic",CustomResponses=((Channel="Projectile",Response=ECR_Overlap),(Channel="HorseIdle",Response=ECR_Overlap),(Channel="HorseMoving",Response=ECR_Overlap),(Channel="InventoryItem",Response=ECR_Overlap)))
++EditProfiles=(Name="Trigger",CustomResponses=((Channel="Projectile",Response=ECR_Overlap),(Channel="HorseIdle",Response=ECR_Overlap),(Channel="HorseMoving",Response=ECR_Overlap),(Channel="InventoryItem",Response=ECR_Overlap)))
++EditProfiles=(Name="InventoryItem",CustomResponses=((Channel="Projectile",Response=ECR_Ignore)))
++EditProfiles=(Name="Projectile",CustomResponses=((Channel="Projectile",Response=ECR_Ignore),(Channel="Ragdoll"),(Channel="HorseIdle",Response=ECR_Overlap),(Channel="HorseMoving",Response=ECR_Overlap),(Channel="InventoryItem",Response=ECR_Ignore)))
++EditProfiles=(Name="Spectator",CustomResponses=((Channel="HorseIdle",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Aura",Response=ECR_Ignore),(Channel="HorseMoving",Response=ECR_Ignore),(Channel="InventoryItem",Response=ECR_Ignore)))
++EditProfiles=(Name="Vehicle",CustomResponses=((Channel="Weapon")))
+-ProfileRedirects=(OldName="BlockingVolume",NewName="InvisibleWall")
+-ProfileRedirects=(OldName="InterpActor",NewName="IgnoreOnlyPawn")
+-ProfileRedirects=(OldName="StaticMeshComponent",NewName="BlockAllDynamic")
+-ProfileRedirects=(OldName="SkeletalMeshActor",NewName="PhysicsActor")
+-ProfileRedirects=(OldName="InvisibleActor",NewName="InvisibleWallDynamic")
++ProfileRedirects=(OldName="BlockingVolume",NewName="InvisibleWall")
++ProfileRedirects=(OldName="InterpActor",NewName="IgnoreOnlyPawn")
++ProfileRedirects=(OldName="StaticMeshComponent",NewName="BlockAllDynamic")
++ProfileRedirects=(OldName="SkeletalMeshActor",NewName="PhysicsActor")
++ProfileRedirects=(OldName="InvisibleActor",NewName="InvisibleWallDynamic")
++ProfileRedirects=(OldName="Horse",NewName="HorseIdle")
++ProfileRedirects=(OldName="PushableActor",NewName="PushableSkeletalMesh")
+-CollisionChannelRedirects=(OldName="Static",NewName="WorldStatic")
+-CollisionChannelRedirects=(OldName="Dynamic",NewName="WorldDynamic")
+-CollisionChannelRedirects=(OldName="VehicleMovement",NewName="Vehicle")
+-CollisionChannelRedirects=(OldName="PawnMovement",NewName="Pawn")
++CollisionChannelRedirects=(OldName="Static",NewName="WorldStatic")
++CollisionChannelRedirects=(OldName="Dynamic",NewName="WorldDynamic")
++CollisionChannelRedirects=(OldName="VehicleMovement",NewName="Vehicle")
++CollisionChannelRedirects=(OldName="PawnMovement",NewName="Pawn")
++CollisionChannelRedirects=(OldName="Horse",NewName="HorseIdle")
+
+[/Script/NavigationSystem.NavigationSystemV1]
+CrowdManagerClass=/Script/AIModule.CrowdManager
+bAutoCreateNavigationData=True
+bSpawnNavDataInNavBoundsLevel=False
+bAllowClientSideNavigation=False
+bShouldDiscardSubLevelNavData=False
+bTickWhilePaused=False
+bInitialBuildingLocked=False
+bSkipAgentHeightCheckWhenPickingNavData=False
+DataGatheringMode=Instant
+bGenerateNavigationOnlyAroundNavigationInvokers=False
+ActiveTilesUpdateInterval=1.000000
++SupportedAgents=(Name="TBLCharacter",Color=(B=0,G=138,R=255,A=164),DefaultQueryExtent=(X=150.000000,Y=150.000000,Z=300.000000),NavigationDataClassName=/Script/NavigationSystem.RecastNavMesh,AgentRadius=46.000000,AgentHeight=200.000000,AgentStepHeight=40.000000,NavWalkingSearchHeightScale=0.500000,PreferredNavData=/Script/NavigationSystem.RecastNavMesh,bCanCrouch=True,bCanJump=True,bCanWalk=True,bCanSwim=True,bCanFly=False)
+DirtyAreasUpdateFreq=60.000000
+
+[/Script/Engine.PhysicsSettings]
+DefaultGravityZ=-980.000000
+DefaultTerminalVelocity=4000.000000
+DefaultFluidFriction=0.300000
+SimulateScratchMemorySize=262144
+RagdollAggregateThreshold=4
+TriangleMeshTriangleMinAreaThreshold=5.000000
+bEnableShapeSharing=False
+bEnablePCM=False
+bEnableStabilization=True
+bWarnMissingLocks=True
+bEnable2DPhysics=False
+PhysicErrorCorrection=(PingExtrapolation=0.100000,PingLimit=100.000000,ErrorPerLinearDifference=1.000000,ErrorPerAngularDifference=1.000000,MaxRestoredStateError=1.000000,MaxLinearHardSnapDistance=400.000000,PositionLerp=0.000000,AngleLerp=0.400000,LinearVelocityCoefficient=100.000000,AngularVelocityCoefficient=10.000000,ErrorAccumulationSeconds=0.500000,ErrorAccumulationDistanceSq=15.000000,ErrorAccumulationSimilarity=100.000000)
+LockedAxis=Invalid
+DefaultDegreesOfFreedom=Full3D
+BounceThresholdVelocity=200.000000
+FrictionCombineMode=Average
+RestitutionCombineMode=Average
+MaxAngularVelocity=3600.000000
+MaxDepenetrationVelocity=0.000000
+ContactOffsetMultiplier=0.010000
+MinContactOffset=0.000100
+MaxContactOffset=1.000000
+bSimulateSkeletalMeshOnDedicatedServer=True
+DefaultShapeComplexity=CTF_UseSimpleAndComplex
+bDefaultHasComplexCollision=True
+bSuppressFaceRemapTable=True
+bSupportUVFromHitResults=False
+bDisableActiveActors=False
+bDisableKinematicStaticPairs=False
+bDisableKinematicKinematicPairs=False
+bDisableCCD=False
+bEnableEnhancedDeterminism=False
+MaxPhysicsDeltaTime=0.033333
+bSubstepping=False
+bSubsteppingAsync=False
+MaxSubstepDeltaTime=0.016667
+MaxSubsteps=6
+SyncSceneSmoothingFactor=0.000000
+InitialAverageFrameRate=0.016667
+PhysXTreeRebuildRate=10
+DefaultBroadphaseSettings=(bUseMBPOnClient=False,bUseMBPOnServer=False,MBPBounds=(Min=(X=0.000000,Y=0.000000,Z=0.000000),Max=(X=0.000000,Y=0.000000,Z=0.000000),IsValid=0),MBPNumSubdivs=2)
+
+[/Script/IOSRuntimeSettings.IOSRuntimeSettings]
+bEnableDynamicMaxFPS=False
+
+[EpicOnlineServices]
+ProductName=Chivalry 2
+ProductVersion=0.0.0
+ProductId=7b1bb546bd6547a4a7c2c4db55ca6c74
+SandboxId=bd46d4ce259349e5bd8b3ded20274737
+DeploymentId=70a4191f74d14a49940750942521a51b
+ClientId=7f2b13acf2e84ab0ae8604d822f10498
+ClientSecret=d34f3fb6-8743-4654-ac02-92e15d36f059
+DedicatedServerClientId=7f2b13acf2e84ab0ae8604d822f10498
+DedicatedServerClientSecret=d34f3fb6-8743-4654-ac02-92e15d36f059
+AuthenticationGraph=Default
+EditorAuthenticationGraph=Default
+; we need this ↓ to be empty, so redpoint EOS won't bootstrap and, as a result, break our perfectly good shipping binary file (specifically for EGS launcher)
+CrossPlatformAccountProvider=
+RequireCrossPlatformAccount=False
+AllowDeviceIdAccounts=False
+AllowNativePlatformAccounts=True
+DeleteDeviceIdOnLogout=False
+DisablePersistentLogin=False
+DevAuthToolAddress=localhost:6300
+DevAuthToolDefaultCredentialName=Context_1
+PlayerDataEncryptionKey=
+PresenceAdvertises=Party
+DelegatedSubsystems=Steam,GDK,PS4,PS5
+ApiVersion=
+;WidgetClass_SelectEOSAccount=/OnlineSubsystemRedpointEOS/EOSDefaultUserInterface_SelectEOSAccount.EOSDefaultUserInterface_SelectEOSAccount_C
+;WidgetClass_LinkEOSAccountsAgainstCrossPlatform=/OnlineSubsystemRedpointEOS/EOSDefaultUserInterface_LinkEOSAccountsAgainstCrossPlatform.EOSDefaultUserInterface_LinkEOSAccountsAgainstCrossPlatform_C
+;WidgetClass_SwitchToCrossPlatformAccount=/OnlineSubsystemRedpointEOS/EOSDefaultUserInterface_SwitchToCrossPlatformAccount.EOSDefaultUserInterface_SwitchToCrossPlatformAccount_C
+;WidgetClass_EnterDevicePinCode=/Game/UI/WidgetsFrontend/PartyAndFriendsPanel/AccountLinking/LinkAccountConsolePopup.LinkAccountConsolePopup_C
+;WidgetClass_SignInOrCreateAccount=/Game/UI/WidgetsFrontend/PartyAndFriendsPanel/AccountLinking/LinkAccountSignInCreatePopup.LinkAccountSignInCreatePopup_C
+;WidgetClass_GrantEASConsent=/Game/UI/WidgetsFrontend/PartyAndFriendsPanel/AccountLinking/LinkAccountPrivacyNoticePopup.LinkAccountPrivacyNoticePopup_C
+NetworkingStack=Default
+RequireEpicGamesLauncher=False
+SimpleFirstPartyLoginUrl=
+PartyJoinabilityConstraint=IgnoreInvitesIfAlreadyInParty
+EnableVoiceChatEchoInParties=False
+EnableVoiceChatPlatformAECByDefault=False
+EnableAntiCheat=False
+TrustedClientPublicKey=
+EnableIdentityChecksOnListenServers=True
+DedicatedServerPublicKey=
+EnableTrustedDedicatedServers=True
+EnableAutomaticEncryptionOnTrustedDedicatedServers=True
+EnableSanctionChecks=False
+NetworkAuthenticationMode=Default
+AcceptStatWriteRequestsFromServers=False
+
+[PacketHandlerComponents]
+EncryptionComponent=DTLSHandlerComponent
++Components=OnlineSubsystemPlayFab.PlayFabAuthComponentModuleInterface
+
+
+[/Script/Engine.GameEngine]
+!NetDriverDefinitions=ClearArray
++NetDriverDefinitions=(DefName="GameNetDriver",DriverClassName="/Script/OnlineSubsystemUtils.IpNetDriver",DriverClassNameFallback="/Script/OnlineSubsystemUtils.IpNetDriver")
++NetDriverDefinitions=(DefName="BeaconNetDriver",DriverClassName="/Script/OnlineSubsystemUtils.IpNetDriver",DriverClassNameFallback="/Script/OnlineSubsystemUtils.IpNetDriver")
++NetDriverDefinitions=(DefName="DemoNetDriver",DriverClassName="/Script/Engine.DemoNetDriver",DriverClassNameFallback="/Script/Engine.DemoNetDriver")
