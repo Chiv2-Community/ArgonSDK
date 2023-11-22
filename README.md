@@ -114,7 +114,9 @@ On the **Serialization Settings** tab, skip serializing all asset types except f
 
 >Important! On the main menu, save your current profile somewhere. This program will crash ***a lot*** during this process. Saving your profile and keeping **Auto Load Profile on Launch** checked will make those crashes less painful.
 
-Click **Scan Assets** on the **Run** tab, and let it scan through all assets. This only needs to be done once. Make sure all folders on the right side are checked at first, then click the **Serialize Assets** button to start serializing assets.
+1. Click **Scan Assets** on the **Run** tab, and let it scan through all assets. This only needs to be done once. 
+2. Make sure all folders on the right side are checked at first
+3. Click the **Serialize Assets** button to start serializing assets.
 
 ~~~
 TODO: find which types are safe to serialize at once
