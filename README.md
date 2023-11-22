@@ -50,8 +50,9 @@ Unpaking Chivalry 2 game assets. This is the first of a three-step process for u
 1. Chivalry 2 installed
 2. UE 4.25 bin folder added to system path (This is so we can use built-in unreal engine tools from the commandline)
 
-This is the path to your unreal bin folder:
+This is an example path to your unreal bin folder:
 `C:\Path\to\unreal\install\UE_4.25\Engine\Binaries\Win64`
+You will need to find your actual UE installation location and fill it in.
 
 [How to add it to system path](https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/)
 
