@@ -1,3 +1,24 @@
 [submodule "Content/Mods/ArgonSDK"]
 	path = Content/Mods/ArgonSDK
 	url = git@github.com:Chiv2-Community/Unchained-Mods.git
+[submodule "Content/Mods/AgMods/Sharingan"]
+	path = Content/Mods/AgMods/Sharingan
+	url = https://github.com/Chiv2-Community/Sharingan
+[submodule "Content/Mods/AgMods/GiantSlayers"]
+	path = Content/Mods/AgMods/GiantSlayers
+	url = https://github.com/Chiv2-Community/GiantSlayers
+[submodule "Content/Mods/AgMods/FilthyPeasants"]
+	path = Content/Mods/AgMods/FilthyPeasants
+	url = https://github.com/Chiv2-Community/FilthyPeasants
+[submodule "Content/Mods/AgMods/Chiv2Turbo"]
+	path = Content/Mods/AgMods/Chiv2Turbo
+	url = https://github.com/Chiv2-Community/Chiv2Turbo
+[submodule "Content/Mods/AgMods/ManlyMen"]
+	path = Content/Mods/AgMods/ManlyMen
+	url = https://github.com/Chiv2-Community/ManlyMen
+[submodule "Content/Mods/AgMods/FlashBlades"]
+	path = Content/Mods/AgMods/FlashBlades
+	url = https://github.com/Chiv2-Community/FlashBlades
+[submodule "Content/Mods/AgMods/ExampleMod"]
+	path = Content/Mods/AgMods/ExampleMod
+	url = https://github.com/Chiv2-Community/ArgonSDK-ExampleMod
