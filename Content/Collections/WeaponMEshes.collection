@@ -1,0 +1,6 @@
+FileVersion:2
+Type:Dynamic
+Guid:68E4670F-4196-CFFF-9A2F-088B2F3BA2D4
+ParentGuid:00000000-0000-0000-0000-000000000000
+
+triangles > 0 AND (Path:'/Game/Weapons'...)

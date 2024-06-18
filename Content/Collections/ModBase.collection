@@ -1,0 +1,6 @@
+FileVersion:2
+Type:Dynamic
+Guid:47C7A6D2-49BE-6FC1-5063-DC92D40E603E
+ParentGuid:00000000-0000-0000-0000-000000000000
+
+( ParentClass=="ArgonSDKModBase") AND (Path:'/Game'...)

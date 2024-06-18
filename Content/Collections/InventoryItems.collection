@@ -1,0 +1,6 @@
+FileVersion:2
+Type:Dynamic
+Guid:BBBAAB2E-427E-4A54-FA8D-A98FA42F670E
+ParentGuid:00000000-0000-0000-0000-000000000000
+
+( NativeParentClass=="InventoryItem") AND (Path:'/Game'...)

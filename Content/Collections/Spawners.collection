@@ -1,0 +1,6 @@
+FileVersion:2
+Type:Dynamic
+Guid:83E63EFE-4C6D-C06E-A541-D79BE3F96BFF
+ParentGuid:00000000-0000-0000-0000-000000000000
+
+( ParentClass=="Spawner") AND (Path:'/Game'...)
