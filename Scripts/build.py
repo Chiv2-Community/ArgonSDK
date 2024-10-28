@@ -7,6 +7,7 @@ PROJECT_NAME = 'TBL'
 PROJ_PATH_DEFAULT = 'M:/chivmodding_i/SDK/ArgonSDK/TBL.uproject'
 UE4_PATH_DEFAULT = 'H:/epic/UE_4.25/Engine/'
 OUTPUT_DIR_DEFAULT = 'M:/chivmodding_i/SDK/ArgonSDK/Scripts'
+MOD_ROOT_DEFAULT = '/Game/Mods/AgMods/'
 
 def run_cook(uproject_path, ue4_root):
     """Runs the UE4 cooking process."""
@@ -84,8 +85,8 @@ if __name__ == '__main__':
     parser_cook.add_argument('ue4_root', type=str, nargs='?', default=UE4_PATH_DEFAULT, help='path to ue4 ("H:/epic/UE_4.25/Engine/")')
 
     parser_pak = subparsers.add_parser('pak', help='pak a mod')
-    parser_pak.add_argument('mod_name', type=str, help='Name of the mod (resulting pak)')
-    parser_pak.add_argument('mod_dir', nargs='?', type=str, help='defaults to "/Game/Mods/AgMods/<mod_name>"')
+    parser_pak.add_argument('mod_name', type=str, help='Name of the mod (resulting pak) (or comma separated list)')
+    parser_pak.add_argument('mod_dir', nargs='?', type=str, help='mod directory, base directory (ends with /) or comma-separated list. defaults to "/Game/Mods/AgMods/<mod_name>"')
     parser_pak.add_argument('dest_dir', type=str, nargs='?', default=OUTPUT_DIR_DEFAULT, help='Output directory. Will be created on spawn')
 
     parser_pak.add_argument('uproject_path', type=str, nargs='?', default=PROJ_PATH_DEFAULT, help='path to .uproject file')
@@ -100,15 +101,20 @@ if __name__ == '__main__':
         )
 
     if args.action == 'pak':    
-        if args.mod_name is None:
-            print('Mod name missing')
+        mod_names = [str(item) for item in args.mod_name.split(',')]
+        if args.mod_dir is None:
+            mod_dirs = [os.path.join(MOD_ROOT_DEFAULT, name) for name in mod_names]
         else:
-            if args.mod_dir is None:
-                args.mod_dir = os.path.join('/Game/Mods/AgMods/', args.mod_name)
+            mod_dirs = [str(item) for item in args.mod_dir.split(',')]
+            if len(mod_dirs) == 1 and mod_dirs[0][-1] == '/': # use directory as base
+                mod_dirs = [os.path.join(MOD_ROOT_DEFAULT, name) for name in mod_names]
 
+        assert len(mod_dirs) == len(mod_names), 'Provide mod directories or mod base path ending with /'
+        for name, dir in list(zip(mod_names, mod_dirs)):
+            print('Mod "{}": "{}"'.format(name, dir))
             process_mod(
-                args.mod_name,
-                args.mod_dir,
+                name,
+                dir,
                 args.uproject_path,
                 args.ue4_root,
                 args.dest_dir
