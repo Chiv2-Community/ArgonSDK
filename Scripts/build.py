@@ -38,14 +38,14 @@ def create_filelist_file(cooked_content_dir, mod_path, filelist_path):
             if os.path.basename(root) == "_Content":
                 repl_path = root
             
-            if repl_path in root:
+            if repl_path is not '' and repl_path in root:
                 dest_path = os.path.join(destination_content_directory, os.path.relpath(root, repl_path))
             else:
                 dest_path = os.path.join(destination_directory, relative_path)
 
             file_cnt = file_cnt + len(files)
             for file in files:                
-                # print(os.path.join(dest_path, file))
+                print(os.path.join(dest_path, file))
                 filelist.write('"{}" "{}"\n'.format(os.path.join(root, file), os.path.join(dest_path, file)))
     return file_cnt
 
@@ -70,8 +70,8 @@ def process_mod(mod_name, mod_dir, uproject_path, ue4_root, dest_dir):
 
     UNREALPAK_EXE = '{0}Binaries/Win64/UnrealPak.exe'.format(ue4_root)
     PAK_FILE = os.path.join(dest_dir, mod_name+".pak")
-
-    subprocess.call([UNREALPAK_EXE, PAK_FILE, "-create="+filelist_path, "-compress"], shell=True, stdout=subprocess.DEVNULL)
+    devnull = open(os.devnull, 'w')
+    subprocess.call([UNREALPAK_EXE, PAK_FILE, "-create="+filelist_path, "-compress"], shell=True, stdout=devnull)
     subprocess.call([UNREALPAK_EXE, PAK_FILE, "-List"], stdout=open(os.path.join(dest_dir, mod_name+'.txt'), 'w'), shell=True)
     print('{} files added to "{}"'.format(file_cnt, PAK_FILE))
 
