@@ -4,6 +4,7 @@ from unreal import WorldFactory, AssetToolsHelpers
 ASSET_TOOLS = unreal.AssetToolsHelpers.get_asset_tools() # type: unreal.AssetTools
 
 def get_object_cdo(object):
+    # type: (unreal.Object) -> unreal.Object
     da_class = unreal.load_object(None, object.get_path_name())
     cdo = unreal.get_default_object(da_class)
     return cdo    
@@ -13,6 +14,7 @@ da_parent_class = unreal.get_default_object(unreal.load_object(None, '/Game/Mods
 DA_FACTORY.set_editor_property("DataAssetClass", da_parent_class)
 
 def create_mod_marker(name, path):
+    # type: (str, str) -> tuple[unreal.Object, unreal.Object]
     new_item = ASSET_TOOLS.create_asset( 
         "{}_Marker".format(name),
         "{}/{}".format(path, name),
@@ -30,6 +32,7 @@ parent_class = unreal.get_default_object(unreal.load_object(None, '/Game/Mods/Ar
 BP_ASSET_FACTORY.set_editor_property("ParentClass", parent_class)
 
 def create_mod(name, path):
+    # type: (str, str) -> tuple[unreal.Object, unreal.Object]
     new_item = ASSET_TOOLS.create_asset( 
         name,
         "{}/{}".format(path, name),

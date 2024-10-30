@@ -230,7 +230,7 @@
 		},
 		{
 			"Name": "PythonScriptPlugin",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "ControlRig",
