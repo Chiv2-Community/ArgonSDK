@@ -5,17 +5,11 @@ import subprocess
 import argparse
 
 PROJECT_NAME = 'TBL'
-# PROJ_PATH_DEFAULT = 'M:/chivmodding_i/SDK/ArgonSDK/TBL.uproject'
-# UE4_PATH_DEFAULT = 'H:/epic/UE_4.25/Engine/'
-# OUTPUT_DIR_DEFAULT = 'M:/chivmodding_i/SDK/ArgonSDK/Scripts'
 MOD_ROOT_DEFAULT = '/Game/Mods/AgMods/'
 
-PROJ_PATH_DEFAULT = None
-UE4_PATH_DEFAULT = None
-OUTPUT_DIR_DEFAULT = None
-# MOD_ROOT_DEFAULT = None
-
 def run_cook(uproject_path, ue4_root, use_popen=False):
+    assert uproject_path, 'Provide project path'
+    assert ue4_root, 'Provide engine root folder'
     """Runs the UE4 cooking process."""
     cook_cmd = [
         '{0}Binaries/Win64/UE4Editor-Cmd.exe'.format(ue4_root),
@@ -69,7 +63,9 @@ def create_filelist_file(uproject_path, mod_path, filelist_path):
     return file_cnt
 
 def process_mod(mod_name, mod_dir, uproject_path, ue4_root, dest_dir):
-    """Process an individual mod - cook, pak, and copy."""
+    """Process an individual mod - create pak at location."""
+    assert uproject_path, 'Provide project path'
+    assert ue4_root, 'Provide engine root folder'
     if not '/Game/' in mod_dir:
         print ('invalid mod dir')
         return
@@ -94,17 +90,17 @@ if __name__ == '__main__':
     # parser.add_argument('action', default='ContentRepl', type=str, help='cook, pak')
     subparsers = parser.add_subparsers(help='cook, pak', dest='action')
     parser_cook = subparsers.add_parser('cook', help='cook project')
-    parser_cook.add_argument('uproject_path', type=str, nargs='?', default=PROJ_PATH_DEFAULT, help='path to .uproject file')
-    parser_cook.add_argument('ue4_root', type=str, nargs='?', default=UE4_PATH_DEFAULT, help='path to ue4 ("H:/epic/UE_4.25/Engine/")')
+    parser_cook.add_argument('uproject_path', type=str, nargs='?', help='path to .uproject file')
+    parser_cook.add_argument('ue4_root', type=str, nargs='?', help='path to ue4 ("H:/epic/UE_4.25/Engine/")')
     parser_cook.add_argument('-s', action='store', nargs='?', metavar='<file.json>', help='Store uproject_path, ue4_root (build.json by default)', default='s' )
     parser_cook.add_argument('-l', nargs='?', metavar='<file.json>', help='Load paths from file (build.json by default)', default='l' )
 
     parser_pak = subparsers.add_parser('pak', help='pak a mod')
     parser_pak.add_argument('mod_name', type=str, help='Name of the mod (resulting pak) (or comma separated list)')
     parser_pak.add_argument('mod_dir', nargs='?', type=str, help='mod directory, base directory (ends with /) or comma-separated list. defaults to "/Game/Mods/AgMods/<mod_name>"')
-    parser_pak.add_argument('dest_dir', type=str, nargs='?', default=OUTPUT_DIR_DEFAULT, help='Output directory. Will be created on spawn')
-    parser_pak.add_argument('uproject_path', type=str, nargs='?', default=PROJ_PATH_DEFAULT, help='path to .uproject file')
-    parser_pak.add_argument('ue4_root', type=str, nargs='?', default=UE4_PATH_DEFAULT, help='path to ue4 ("H:/epic/UE_4.25/Engine/")')
+    parser_pak.add_argument('dest_dir', type=str, nargs='?', help='Output directory. Will be created on spawn')
+    parser_pak.add_argument('uproject_path', type=str, nargs='?', help='path to .uproject file')
+    parser_pak.add_argument('ue4_root', type=str, nargs='?', help='path to ue4 ("H:/epic/UE_4.25/Engine/")')
     parser_pak.add_argument('-s', nargs='?', metavar='FILE', help='Store mod_dir(/), dest_dir, uproject_path, ue4_root (build.json by default)', default='s' )
     parser_pak.add_argument('-l', nargs='?', metavar='FILE', help='Load paths from file (build.json by default)', default='l' )
     args, leftover = parser.parse_known_args()
@@ -118,7 +114,7 @@ if __name__ == '__main__':
             "uproject_path" : args.uproject_path,
             "ue4_root" : args.ue4_root,
             "mod_dir" : None,
-            "dest_dir" : hasattr(args, 'mod_dir') and args.mod_dir or None
+            "dest_dir" : hasattr(args, 'dest_dir') and args.dest_dir or None
         }
         if hasattr(args, 'mod_dir'):
             if args.mod_dir and args.mod_dir[-1] == '/':
