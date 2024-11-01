@@ -36,6 +36,6 @@ _Install Obsidian and open the folder as vault. Hint: Enable "Show existing file
 
 ## ArgonSDK-FieldGuide
 This repository contains some basic modding tutorials specific for Chiv2.
-[Modding process overview](https://knutschbert.github.io/ArgonSDK-FieldGuide/Introduction/)
-[Tutorial: Create a FFFA Map](https://knutschbert.github.io/ArgonSDK-FieldGuide/Tutorials/T2%20Create%20a%20Free-For-All%20Map%20%28FFA%29/)
-[Tutorial: Create a Blueprint Mod](https://knutschbert.github.io/ArgonSDK-FieldGuide/Tutorials/T3%20Create%20your%20first%20Blueprint%20Mod/)
+- [Modding process overview](https://knutschbert.github.io/ArgonSDK-FieldGuide/Introduction/)
+- [Tutorial: Create a FFA Map](https://knutschbert.github.io/ArgonSDK-FieldGuide/Tutorials/T2%20Create%20a%20Free-For-All%20Map%20%28FFA%29/)
+- [Tutorial: Create a Blueprint Mod](https://knutschbert.github.io/ArgonSDK-FieldGuide/Tutorials/T3%20Create%20your%20first%20Blueprint%20Mod/)
