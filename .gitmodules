@@ -1,6 +1,6 @@
 [submodule "Content/Mods/ArgonSDK"]
 	path = Content/Mods/ArgonSDK
-	url = git@github.com:Chiv2-Community/Unchained-Mods.git
+	url = https://github.com/Chiv2-Community/Unchained-Mods.git
 [submodule "Content/Mods/AgMods/Sharingan"]
 	path = Content/Mods/AgMods/Sharingan
 	url = https://github.com/Chiv2-Community/Sharingan
