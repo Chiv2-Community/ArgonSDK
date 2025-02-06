@@ -43,6 +43,15 @@ if %ERRORLEVEL% neq 0 (
     exit /b 1
 )
 
+git submodule sync
+if %ERRORLEVEL% neq 0 (
+    echo Error synchronizing submodules
+    echo.
+    pause
+    exit /b 1
+)
+
+
 git submodule update --recursive --remote
 if %ERRORLEVEL% neq 0 (
     echo Error updating submodules
