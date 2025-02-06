@@ -43,7 +43,7 @@ if %ERRORLEVEL% neq 0 (
     exit /b 1
 )
 
-git submodule update --recursive
+git submodule update --recursive --remote
 if %ERRORLEVEL% neq 0 (
     echo Error updating submodules
     echo.
