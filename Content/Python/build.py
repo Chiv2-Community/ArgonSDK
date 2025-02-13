@@ -52,13 +52,19 @@ def create_filelist_file(uproject_path, mod_path, filelist_path):
 
             if repl_path != '' and repl_path in root:
                 dest_path = os.path.join(destination_content_directory, os.path.relpath(root, repl_path))
-            else:
-                dest_path = os.path.join(destination_directory, relative_path)
+                file_cnt = file_cnt + len(files)
+                for idx, file in enumerate(files):                
+                    # print(os.path.relpath(os.path.join(root, file), source_directory), '->', os.path.join(dest_path, file))
+                    # print(idx,'REPL COPY\t', os.path.join(dest_path, file))
+                    filelist.write('"{}" "{}"\n'.format(os.path.join(root, file), os.path.join(dest_path, file)))
+                    print(idx,'REPL COPY\t', os.path.join(root, file), os.path.join(dest_path, file))
+            # else:
+            dest_path = os.path.join(destination_directory, relative_path)
 
             file_cnt = file_cnt + len(files)
             for idx, file in enumerate(files):                
                 # print(os.path.relpath(os.path.join(root, file), source_directory), '->', os.path.join(dest_path, file))
-                print(idx,'\t', os.path.join(dest_path, file))
+                print(idx,'asd\t', os.path.join(root, file), os.path.join(dest_path, file))
                 filelist.write('"{}" "{}"\n'.format(os.path.join(root, file), os.path.join(dest_path, file)))
     return file_cnt
 
@@ -80,7 +86,7 @@ def process_mod(mod_name, mod_dir, uproject_path, ue4_root, dest_dir):
     UNREALPAK_EXE = os.path.join(ue4_root, 'Binaries/Win64/UnrealPak.exe')
     PAK_FILE = os.path.join(dest_dir, mod_name+".pak")
     devnull = open(os.devnull, 'w')
-    subprocess.call([UNREALPAK_EXE, PAK_FILE, "-create="+filelist_path, "-compress"], shell=True, stdout=devnull)
+    subprocess.call([UNREALPAK_EXE, PAK_FILE, "-create="+filelist_path, "-compress"], shell=True) # , stdout=devnull
     subprocess.call([UNREALPAK_EXE, PAK_FILE, "-List"], stdout=open(os.path.join(dest_dir, mod_name+'.txt'), 'w'), shell=True)
     print('{} files added to "{}"'.format(file_cnt, PAK_FILE))
 
