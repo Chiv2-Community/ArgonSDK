@@ -1,0 +1,105 @@
+{
+  "source": "Original cooked assets read directly from the installed Chivalry 2 shipping PAKs with CUE4Parse; reflected declarations only.",
+  "assets": [
+    "TBL/Content/Interactables/Carryables/BaseCarryable_2hLoot/Carryable_CatapultRock.uasset",
+    "TBL/Content/Interactables/Deployables/BearTrap/BP_BearTrap.uasset",
+    "TBL/Content/UI/WidgetsIngame/VOMenu/RadialVOMenu.uasset"
+  ],
+  "functions": [
+    {
+      "name": "BroadcastNonWorldBlockingHit",
+      "outer": "Carryable_CatapultRock_C",
+      "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+      "parameters": [
+        {
+          "Name": "ProjectileHit",
+          "Type": "StructProperty",
+          "Struct": {
+            "ObjectName": "ScriptStruct'ProjectileHitParams'",
+            "ObjectPath": "/Script/TBL"
+          },
+          "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+        }
+      ],
+      "instructions": 4
+    },
+    {
+      "name": "BroadcastProjectileWorldBlockingHit",
+      "outer": "Carryable_CatapultRock_C",
+      "flags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+      "parameters": [
+        {
+          "Name": "ProjectileHit",
+          "Type": "StructProperty",
+          "Struct": {
+            "ObjectName": "ScriptStruct'ProjectileHitParams'",
+            "ObjectPath": "/Script/TBL"
+          },
+          "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+        }
+      ],
+      "instructions": 4
+    },
+    {
+      "name": "OnRagdollDetach",
+      "outer": "BP_BearTrap_C",
+      "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent",
+      "parameters": [
+        {
+          "Name": "Character",
+          "Type": "ObjectProperty",
+          "PropertyClass": {
+            "ObjectName": "Class'TBLCharacter'",
+            "ObjectPath": "/Script/TBL"
+          },
+          "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+        }
+      ],
+      "instructions": 4
+    },
+    {
+      "name": "OnRagdollAttach",
+      "outer": "BP_BearTrap_C",
+      "flags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent",
+      "parameters": [
+        {
+          "Name": "Character",
+          "Type": "ObjectProperty",
+          "PropertyClass": {
+            "ObjectName": "Class'TBLCharacter'",
+            "ObjectPath": "/Script/TBL"
+          },
+          "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+        }
+      ],
+      "instructions": 4
+    },
+    {
+      "name": "BindActionInput",
+      "outer": "RadialVOMenu_C",
+      "flags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent",
+      "parameters": [
+        {
+          "Name": "ActionName",
+          "Type": "NameProperty",
+          "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+        },
+        {
+          "Name": "Consume",
+          "Type": "BoolProperty",
+          "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+        },
+        {
+          "Name": "Callback",
+          "Type": "DelegateProperty",
+          "SignatureFunction": {
+            "ObjectName": "DelegateFunction'OnInputAction__DelegateSignature'",
+            "ObjectPath": "/Script/UMG"
+          },
+          "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+        }
+      ],
+      "instructions": 6
+    }
+  ]
+}

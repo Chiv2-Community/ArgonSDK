@@ -54,7 +54,52 @@ namespace
         return Found == 1;
     }
 
-    bool RepairLegacyEvents(UBlueprint* Blueprint, bool Ragdoll)
+    const TCHAR* ProjectileEvents[] = {TEXT("BroadcastProjectileWorldBlockingHit"),
+                                       TEXT("BroadcastNonWorldBlockingHit")};
+
+    bool RepairProjectileEvents(UBlueprint* Blueprint)
+    {
+        auto* HitType = FindObject<UScriptStruct>(nullptr, TEXT("/Script/TBL.ProjectileHitParams"));
+        if (!HitType)
+            return false;
+        int Found = 0;
+        for (auto* Graph : Blueprint->UbergraphPages)
+            for (auto* Node : Graph->Nodes)
+                if (auto* Event = Cast<UK2Node_CustomEvent>(Node))
+                    for (const TCHAR* Name : ProjectileEvents)
+                        if (Event->CustomFunctionName == Name)
+                            for (auto& UserPin : Event->UserDefinedPins)
+                                if (UserPin->PinName == TEXT("ProjectileHit"))
+                                {
+                                    // The original shipping callbacks both take
+                                    // FProjectileHitParams. Keep the event declaration and all
+                                    // connections.
+                                    UserPin->PinType.PinCategory = UEdGraphSchema_K2::PC_Struct;
+                                    UserPin->PinType.PinSubCategoryObject = HitType;
+                                    if (auto* Pin = Event->FindPin(TEXT("ProjectileHit")))
+                                        Pin->PinType = UserPin->PinType;
+                                    ++Found;
+                                }
+        return Found == 2;
+    }
+
+    bool HasExpectedProjectileSignatures(UBlueprint* Blueprint)
+    {
+        auto* HitType = FindObject<UScriptStruct>(nullptr, TEXT("/Script/TBL.ProjectileHitParams"));
+        for (const TCHAR* Name : ProjectileEvents)
+        {
+            auto* Function = Blueprint->GeneratedClass->FindFunctionByName(Name);
+            auto* Parameter = Function
+                                  ? FindFProperty<FStructProperty>(Function, TEXT("ProjectileHit"))
+                                  : nullptr;
+            if (!Parameter || Parameter->Struct != HitType ||
+                !Function->HasAllFunctionFlags(FUNC_BlueprintCallable | FUNC_BlueprintEvent))
+                return false;
+        }
+        return HitType != nullptr;
+    }
+
+    bool RepairRagdollEvents(UBlueprint* Blueprint)
     {
         TArray<UK2Node_CustomEvent*> Events;
         for (auto* Graph : Blueprint->UbergraphPages)
@@ -63,9 +108,7 @@ namespace
                 {
                     const FName Name = Event->CustomFunctionName;
                     const bool Match =
-                        Ragdoll ? Name == TEXT("OnRagdollAttach") || Name == TEXT("OnRagdollDetach")
-                                : Name == TEXT("BroadcastProjectileWorldBlockingHit") ||
-                                      Name == TEXT("BroadcastNonWorldBlockingHit");
+                        Name == TEXT("OnRagdollAttach") || Name == TEXT("OnRagdollDetach");
                     if (!Match)
                         continue;
                     // These are empty SDK stubs. Refuse to discard user-added logic.
@@ -80,11 +123,10 @@ namespace
                     Events.Add(Event);
                 }
         UClass* Interface = FindObject<UClass>(nullptr, TEXT("/Script/TBL.AttachRagdollInterface"));
-        if (Ragdoll && !Interface)
+        if (!Interface)
             return false;
         for (auto* Event : Events)
         {
-            if (Ragdoll)
             {
                 // Interface overrides must be native event nodes, not custom
                 // events which cause duplicate generated function declarations.
@@ -121,6 +163,12 @@ namespace
                 Last->CustomFunctionName = Name;
                 Graph->AddNode(Last, false, false);
                 Last->AllocateDefaultPins();
+                if (!Ragdoll)
+                {
+                    FEdGraphPinType Type;
+                    Type.PinCategory = UEdGraphSchema_K2::PC_Struct;
+                    Last->CreateUserDefinedPin(TEXT("ProjectileHit"), Type, EGPD_Output);
+                }
             }
             auto* Call = NewObject<UK2Node_ExecutionSequence>(Graph);
             Graph->AddNode(Call, false, false);
@@ -131,7 +179,9 @@ namespace
                 return false;
             Output->MakeLinkTo(Input);
             // Even an earlier empty event must survive when a later event is linked.
-            if (RepairLegacyEvents(Blueprint, Ragdoll != 0) || Graph->Nodes.Num() != 3 ||
+            const bool Repaired =
+                Ragdoll ? RepairRagdollEvents(Blueprint) : RepairProjectileEvents(Blueprint);
+            if (Repaired != (Ragdoll == 0) || Graph->Nodes.Num() != 3 ||
                 !Output->LinkedTo.Contains(Input) || !Input->LinkedTo.Contains(Output))
                 return false;
         }
@@ -253,8 +303,9 @@ int32 USDKReferenceRepairCommandlet::Main(const FString& Params)
         Blueprints.Add(Blueprint);
         if (Repair)
         {
-            const bool Repaired =
-                Index == 0 ? RepairWheel(Blueprint) : RepairLegacyEvents(Blueprint, Index == 2);
+            const bool Repaired = Index == 0   ? RepairWheel(Blueprint)
+                                  : Index == 1 ? RepairProjectileEvents(Blueprint)
+                                               : RepairRagdollEvents(Blueprint);
             if (!Repaired)
                 return 5;
             FBlueprintEditorUtils::MarkBlueprintAsStructurallyModified(Blueprint);
@@ -264,6 +315,8 @@ int32 USDKReferenceRepairCommandlet::Main(const FString& Params)
                    Report->GetNumberField(TEXT("warnings")) == 0;
         if (Index == 0)
             Success &= HasExpectedCallbackSignature(Blueprint);
+        if (Index == 1)
+            Success &= HasExpectedProjectileSignatures(Blueprint);
         Assets.Add(MakeShared<FJsonValueObject>(Report));
         for (UClass* Parent = Blueprint->ParentClass; Parent; Parent = Parent->GetSuperClass())
             if (auto* ParentBlueprint = Cast<UBlueprint>(Parent->ClassGeneratedBy))

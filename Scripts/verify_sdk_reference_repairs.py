@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 
-LEGACY_PROJECTILE_EVENTS = {
+PROJECTILE_EVENTS = {
     "BroadcastProjectileWorldBlockingHit",
     "BroadcastNonWorldBlockingHit",
 }
@@ -36,11 +36,17 @@ def verify(before, after):
         assert fixed["parent"] == original["parent"], asset
         if asset.endswith(".Carryable_CatapultRock"):
             assert original["errors"] == 12
-            assert graphs_without_stubs(original, LEGACY_PROJECTILE_EVENTS, True) == graphs_without_stubs(fixed, set(), True)
-            assert not any(
-                node.get("symbol") in LEGACY_PROJECTILE_EVENTS
-                for graph in fixed["graphs"] for node in graph["nodes"]
-            )
+            expected = json.loads(json.dumps(original["graphs"]))
+            for graph in expected:
+                for node in graph["nodes"]:
+                    if node.get("symbol") in PROJECTILE_EVENTS:
+                        for pin in node["pins"]:
+                            if pin["name"] == "ProjectileHit":
+                                pin["subtype"] = "/Script/TBL.ProjectileHitParams"
+            assert expected == fixed["graphs"], "Projectile declarations and connections must be retained"
+            callbacks = [node for graph in fixed["graphs"] for node in graph["nodes"] if node.get("symbol") in PROJECTILE_EVENTS]
+            assert {node["symbol"] for node in callbacks} == PROJECTILE_EVENTS
+            assert len(callbacks) == 2
         elif asset.endswith(".BP_BearTrap"):
             assert original["errors"] == 2
             assert graphs_without_stubs(original, RAGDOLL_EVENTS, False) == graphs_without_stubs(fixed, RAGDOLL_EVENTS, False)
