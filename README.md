@@ -31,6 +31,9 @@ Join [Chivalry 2 Unchained Discord](https://discord.gg/chiv2unchained) to be not
 5. Locate and run Mod Packer Widget (`Scripts/ModHandling/ModPackerWidget`)
 
 ## ArgonSDK-FieldGuide
+For custom-map names and descriptions on loading screens, see
+[Map loading metadata](Docs/MapLoadingMetadata.md).
+
 This repository contains some basic modding tutorials specific for Chiv2.
 - [Chivalry 2 class reference](https://knutschbert.github.io/ArgonSDK-FieldGuide/ClassDocsGenerated/index_classes.html)
 - [Modding process overview](https://knutschbert.github.io/ArgonSDK-FieldGuide/Introduction.html)
