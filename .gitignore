@@ -73,6 +73,9 @@ Plugins/**/Binaries/*
 Plugins/AssetDumper/*
 Plugins/AssetGenerator/*
 
+# Default Paks output filter
+Scripts/Paks/*
+
 # Cache files for the editor to use
 DerivedDataCache/*
 
