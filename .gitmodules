@@ -22,3 +22,6 @@
 [submodule "Content/Mods/AgMods/ExampleMod"]
 	path = Content/Mods/AgMods/ExampleMod
 	url = https://github.com/Chiv2-Community/ArgonSDK-ExampleMod
+[submodule "Plugins/ArgonSDKTooling"]
+	path = Plugins/ArgonSDKTooling
+	url = /mnt/p/code/chiv/2026/sdk_repos/ArgonSDK-Tooling
