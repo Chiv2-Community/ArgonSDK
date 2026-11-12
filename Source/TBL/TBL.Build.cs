@@ -41,5 +41,18 @@ public class TBL : ModuleRules {
             "TBLLoadingScreen",
             "UMG",
         });
+
+        // AssemblyInstance moved into the Engine module in the custom 4.25 engine
+        // fork. Use the engine's class when present; otherwise pull the fallback
+        // from the TBLAssemblyCompat module (not built when the engine has the class).
+        string AssemblyInstanceHeader = System.IO.Path.Combine(
+            EngineDirectory, "Source", "Runtime", "Engine", "Classes", "Engine", "AssemblyInstance.h");
+        bool bEngineHasAssemblyInstance = System.IO.File.Exists(AssemblyInstanceHeader);
+        PublicDefinitions.Add("TBL_WITH_ENGINE_ASSEMBLY_INSTANCE=" +
+            (bEngineHasAssemblyInstance ? "1" : "0"));
+        if (!bEngineHasAssemblyInstance)
+        {
+            PublicDependencyModuleNames.Add("TBLAssemblyCompat");
+        }
     }
 }

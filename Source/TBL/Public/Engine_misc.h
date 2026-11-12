@@ -1,5 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
+#if TBL_WITH_ENGINE_ASSEMBLY_INSTANCE
+// The custom 4.25 engine fork exposes UAssemblyInstance from the Engine module.
+#include "Engine/AssemblyInstance.h"
+#else
+// Stock 4.25 lacks it; TBLAssemblyCompat supplies the fallback (see TBL.Build.cs).
+#include "AssemblyInstance.h"
+#endif
 #include "Engine_misc.generated.h"
 
 UCLASS(Blueprintable)
@@ -11,13 +18,6 @@ class UAssemblyBlueprint : public UBlueprint
 
     //void OnBlueprintChanged(class UBlueprint* Blueprint);
 }; // Size: 0xA8
-
-UCLASS(Blueprintable)
-class UAssemblyInstance : public UObject
-{
-    GENERATED_BODY()
-    //char padding_0[0x28];                                                             // 0x0000 (size: 0x0)
-}; // Size: 0x28
 
 UCLASS(Blueprintable)
 class UAssemblyObject : public UObject
