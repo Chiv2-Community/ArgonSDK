@@ -139,6 +139,9 @@ public:
     ATBLWorldSettings();
     UFUNCTION(BlueprintCallable, BlueprintPure)
     TMap<ASpawner*, FString> GetSpawnerSequenceBindingPrefixes();
+
+    void CreateMapSummary();
+    virtual void PreSave(const class ITargetPlatform* TargetPlatform) override;
     
 };
 
