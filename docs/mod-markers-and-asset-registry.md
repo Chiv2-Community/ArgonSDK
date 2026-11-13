@@ -138,7 +138,7 @@ mod never fails to load — it just loads the slower way.
 ## For mod authors
 
 **The easy path — let the tooling do it.** Package your mod with the
-[ArgonSDKTooling](https://github.com/Knutschbert/ArgonSDKTooling) plugin (the
+[ArgonSDKTooling](https://github.com/Chiv2-Community/ArgonSDKTooling) plugin (the
 in-editor **Mod Packer** widget, or `deploy.py`). It creates/updates the markers
 from your folder, stamps the version from `mod.json`, cooks, and writes
 `ModAssetRegistry.bin` into the pak for you. See the plugin's `README.md` for the
@@ -164,7 +164,7 @@ thing to check.
 
 ## Related documentation
 
-- **Packaging & commands:** [ArgonSDKTooling](https://github.com/Knutschbert/ArgonSDKTooling)
+- **Packaging & commands:** [ArgonSDKTooling](https://github.com/Chiv2-Community/ArgonSDKTooling)
   `README.md` (cook/pak, `sync-tooling`, the Mod Packer widget).
 - **Loader behaviour:** the Unchained plugin registers markers and merges
   `ModAssetRegistry.bin` into the runtime Asset Registry, with header-scan
