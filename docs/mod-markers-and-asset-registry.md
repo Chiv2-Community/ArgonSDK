@@ -7,7 +7,7 @@ game restart**.
 This page is the source of truth for the marker **data assets** and the
 `ModAssetRegistry.bin` payload. The cook/pak tooling that produces them lives in
 the **ArgonSDKTooling** plugin — see
-[Knutschbert/ArgonSDKTooling](https://github.com/Knutschbert/ArgonSDKTooling)
+[Chiv2-Community/ArgonSDKTooling](https://github.com/Chiv2-Community/ArgonSDKTooling)
 (shipped in this SDK at `Plugins/ArgonSDKTooling`); its `README.md` documents the
 packaging commands and the in-editor Mod Packer widget.
 
