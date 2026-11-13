@@ -30,6 +30,9 @@ Join [Chivalry 2 Unchained Discord](https://discord.gg/chiv2unchained) to be not
 4. Open `TBL.uproject` and rebuild dependencies if prompted
 5. Locate and run Mod Packer Widget (`Scripts/ModHandling/ModPackerWidget`)
 
+For diagnostics and guarded repairs of legacy emote-wheel, catapult-rock and
+bear-trap Blueprint references, see [SDK Reference Tools](Plugins/SDKReferenceTools/README.md).
+
 ## ArgonSDK-FieldGuide
 This repository contains some basic modding tutorials specific for Chiv2.
 - [Chivalry 2 class reference](https://knutschbert.github.io/ArgonSDK-FieldGuide/ClassDocsGenerated/index_classes.html)

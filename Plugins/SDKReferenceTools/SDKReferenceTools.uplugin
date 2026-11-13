@@ -1,0 +1,13 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "SDK Reference Tools",
+  "Description": "Editor-only diagnostics and targeted repairs for legacy SDK Blueprint references.",
+  "Category": "Editor",
+  "EnabledByDefault": true,
+  "CanContainContent": false,
+  "Modules": [
+    { "Name": "SDKReferenceTools", "Type": "Editor", "LoadingPhase": "Default" }
+  ]
+}
